@@ -1,0 +1,16 @@
+.u-section-0 {
+        margin-top: 10px;
+        align-items: center;
+        background-color: #9fb7d8;
+        text-align: center;
+}
+
+.u-buttons {
+        background-color: #9fb7d8;
+        align-self: center;
+        border-style : none;
+}
+
+.u-buttons:hover {
+        background-color: #cad7e7;
+      }
