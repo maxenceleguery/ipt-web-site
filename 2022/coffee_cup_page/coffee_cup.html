@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="src_im/logo1.png">
+  <title>Coffee Cup Project</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+
+<center>
+    <h1>Coffee Cup Project</h1>
+    <img src="src_im/logo1.png">
+    <h2> <i>Etude d’un problème inverse : retrouver les caractéristiques géométriques d’une tasse à café à partir du son
+            qu'elle peut émettre</i></h2>
+</center>
+
+
+<body>
+    <h2> Vidéo de vulgarisation</h2>
+    <center>
+        <video width="320" height="240" controls>
+            <source src="src_vid/IPT_vulga.mp4" type="video/mp4">
+
+            Your browser does not support the video tag.
+        </video>
+    </center>
+
+    <h2> Vidéo de présentation</h2>
+    <center>
+        <video width="320" height="240" controls>
+            <source src="src_vid/IPT_coffe_cup_12min.mp4" type="video/mp4">
+
+            Your browser does not support the video tag.
+        </video>
+    </center>
+
+    <h3>Introduction</h3>
+
+    <p>Prenez une tasse à café ou un mug. Ce sont des objets communs que l’on possède tous chez soi. Prenez ensuite une
+        cuillère,
+        c’est encore une fois un objet relativement commun, que l’on possède chez soi.
+        Essayez de plonger la cuillère dans votre tasse ou votre mug vide et de taper aux 3 quarts de la hauteur de
+        l’objet.
+        Vous entendez que la tasse émet un son, plus ou moins important et plus ou moins aigu en fonction du matériaux
+        de votre tasse ou de votre mug.
+        Essayez maintenant de taper sur la tasse toujours à la même hauteur mais en vous déplaçant le long du périmètre
+        du cercle de votre objet.
+        Vous pourrez observer, si vous tendez l’oreille, que la hauteur du son, c'est-à-dire si la note est plus ou
+        moins aiguë, change en fonction de là où on tape.
+        On peut même remarquer que le son change de façon périodique par rapport à l’angle entre le point d’impact et le
+        centre de l’anse de la tasse ou du mug.
+        Le son émis dépend fortement du point d’impact</p>
+
+    <p>On peut continuer à étudier notre objet de la sorte. Faire des enregistrements, construire un modèle, et ainsi de
+        suite …
+        De nombreux scientifiques se sont déjà penchés sur la question et on peut facilement obtenir à partir de la
+        connaissance de l’objet et la connaissance de l’endroit d’impact. Cette question bien que très intéressante et
+        se présentant comme un exercice scientifique intéressant est déjà résolue. Dans notre étude nous ne sommes pas
+        intéressés à l’étude de ce problème direct.
+        C’est-à-dire, prédire le spectre fréquentiel du son produit en tapant sur différentes parties de la tasse.
+        Nous avons cherché à retrouver la forme de la tasse (ou plutôt des informations sur la forme de la tasse) à
+        partir des sons qu’elle émet lorsqu’on tape dessus.
+        En résumé, notre problème consiste à: <b>mettre en place une méthode expérimentale pour retrouver la forme de la
+            tasse à partir du son qu’elle produit</b>.
+        On se posera donc la question de savoir : <b>quelle est la quantité minimale d’information</b>s sur sa géométrie
+        pour rendre ce problème soluble ?
+    </p>
+
+    <h3>1. Une première approche</h3>
+    <h4>a. Description de la méthode</h4>
+
+    <p> La première idée que nous avons eu a été <b>d’enregistrer
+            les sons</b> issus des vibrations des tasses que l’on considérait,
+        d’en déduire les <b>fréquences de résonance</b> de la tasse plus de <b> remonter aux caractéristiques de la
+            tasse</b>.
+        La logique derrière ce raisonnement était de considérer notre tasse comme un objet vibrant et ayant des modes de
+        vibration, conformément à la théorie des systèmes dynamiques. Nous modélisons, ici, notre tasse comme une demie
+        coque sphérique creuse.
+        Cet objet possède donc des modes de vibration qu’il nous faut retrouver. Une fois que nous avons identifié ces
+        modes on peut utiliser les équations du modèle des systèmes dynamiques (modèle bien connu des scientifiques
+        modernes, comme nous l’expliquions plus haut) en générant un grand nombre de modes propres relatif à des tasses
+        ayant des caractéristiques connues puis en comparant les différents modes propres générés avec ceux de notre
+        tasse on retrouve les caractéristiques de notre tasse.
+    </p>
+
+    <p>Afin de faire cela il nous fallait donc faire deux choses. D’une part, obtenir les modes propres de notre tasse.
+        Pour cela il fallait enregistrer le son émis par
+        la tasse lorsqu’on la tape puis analyser le signal. D’autre part, il nous fallait générer des modes propres pour
+        plusieurs valeurs des paramètres de la tasse et comparer la base de données générée avec les valeurs acquises
+        lors de l’expérience</p>
+
+
+    <h4>b. Montage Expérimental</h4>
+
+    <p>Le montage expérimental est composé de plusieurs éléments. La tasse que l’on considère qui était dans notre cas
+        un bécher sans anse par mesure de simplicité mais aussi pour pouvoir jouer sur les paramètre physique de l’objet
+        sans changer le matériaux), la table en marbre sur laquelle était fixé le bécher, un marteau d’impact, un micro
+        ultra directionnel, un ordinateur ainsi que les appareils pour convertir et acheminer les signaux à
+        l'ordinateur. Le montage est le suivant :
+
+    </p>
+
+    <center> <img src="src_im/schema1.png"></center>
+    <p>
+        Ainsi le montage permet d’acquérir un signal d’entrée (celui du marteau) et un signal de sortie (celui du
+        micro). On peut ainsi étudier la fonction de transfère de notre signal et s’affranchir des modifications dû au
+        changement de force du marteau : en d’autres termes on connaît précisément la force que l’on met dans l’impact à
+        chaque fois.
+    </p>
+
+    <p>
+        <i>Remarque : </i>On peut étudier la fonction de transfert du signal car la réponse de la tasse est linéaire (cf
+        courbes plus tard). Sinon ça n’aurait pas de sens de considérer cette fonctione de transfert.
+    </p>
+
+    <ul>
+        <li> Marteau:
+            Capteur Piézoélectrique,
+            3 différentes pointes
+            <img src="src_im/schema2.png">
+        </li>
+
+        <li> Micro:
+            Très directif
+            Précision : Pas d'effet perturbateur du microphone
+
+            <img src="src_im/schema3.png">
+        </li>
+
+    </ul>
+
+
+    <h4>c. Résultats</h4>
+    <center>
+        <p> <img src="src_im/schema4.png"> <img src="src_im/schema5.png"></p>
+    </center>
+
+    <ul>
+        <li> Enregistrement des signaux temporels:
+            <center><img src="src_im/schema6.png"> <img src="src_im/schema7.png"> </center>
+
+        </li>
+
+        <li> Conversion en densité spectrale de puissance:
+            <center><img src="src_im/schema8.png"> <img src="src_im/schema9.png"> </center>
+        </li>
+
+    </ul>
+
+    <h4>d. Modélisation de notre tasse : le modèle de la coque cylindrique:</h4>
+
+    <h5> <b>Formulation du problème: </b></h5>
+    <p>
+        On commence par modéliser une tasse sans anse (bécher) par une coque cylindrique homogène à paroi mince de rayon
+        R, de longueur L, d'épaisseur h, dont la surface centrale est rapportée au repère de coordonnées curvilignes
+        (x,θ).
+
+        <center><img src="src_im/schema10.png"></center>
+    </p>
+
+    <b>Hypothèses du modèle:</b>
+
+    <ul>
+        <li> h négligeable devant R et L.
+        </li>
+
+        <li> Une des bases de la coque est encastrée (x=0) et l’autre est libre (x=L).
+
+        </li>
+
+        <li> Les contributions des déflexions dans le plan peuvent être négligées dans les expressions de déformation en
+            flexion mais pas dans les expressions de déformation de la membrane.
+        </li>
+        <li>L'influence de l'inertie dans la direction du plan est négligée. Il va sans dire que la théorie est limitée
+            à un chargement normal.
+        </li>
+        <li> Nous négligeons les termes de cisaillement.
+        </li>
+
+    </ul>
+
+    En utilisant les équations de Hamilton on obtient:
+
+    <center><img src="src_im/schema11.png"></center>
+
+
+
+    Avec ux : Champ de déplacement sur l’axe des x et Φ: fonction de contraintes d’Airy .
+
+    <p>Ces équations permettent de calculer les modes propres et surtout les fréquences propres de vibration :</p>
+
+    <center><img src="src_im/schema12.png"></center>
+    Avec,
+    <center><img src="src_im/schema13.png"></center>
+
+
+    <h4>e. Approche pour la résolution</h4>
+
+    <b>Hypothèses du modèle:</b>
+
+    <ul>
+        <li>Une coque cylindrique est parfaitement définie par la connaissance de (h,R,L,E,ρ,ν)
+        </li>
+
+        <li> On suppose que les paramètres non géométriques sont connus (E,ρ,ν)
+            <center><img src="src_im/schema14.png"></center>
+        </li>
+
+        <li>
+            On cherche les paramètres restants (h,R,L).
+        </li>
+
+    </ul>
+
+    <h4>f. Simulation (Éléments finis):</h4>
+
+    <center><img src="src_im/schema15.png"></center>
+    <i>Simulation d’un mode de cylindre à fond fixé sur Freefem++</i>
+
+    <p>
+        Dans cette partie on étudie la vibration de la membrane de la tasse à l’aide de GMSH (pour générer un maillage
+        de la tasse) et de Freefem++ (solveur d’EDP) en l’automatisant pour tester plusieurs valeurs de R, L et h.
+    </p>
+
+    <p>
+        Les équations résolues par Freefem++ pour déterminer les modes propres de vibration du cylindre sont basées sur
+        les lois de l’élasticité suivantes en tenant compte des conditions aux limites:
+
+    </p>
+
+
+    <center><img src="src_im/schema16.png"></center>
+
+    <center><img src="src_im/schema17.png"></center>
+
+    avec: λ et μ sont les coefficients de Lamé du matériau (dépendent de E et v)
+    <center><img src="src_im/schema18.png"></center>
+
+
+    <b>Résultats</b>
+    <p>
+        En utilisant la simulation, on peut revenir à R et L aussi précisément qu’avec les résultats analytiques, ici on
+        ne se concentre que sur h.
+    </p>
+    <center><img src="src_im/schema19.png"></center>
+    <p>
+        Sur cette figure, on considère 4 béchers de taille différente et on varie l’épaisseur h de 1 à 5 mm, après on
+        génère à l’aide de Freefem++ pour chaque h le spectre de fréquences propres associés et on essaye de le matcher
+        avec les fréquences expérimentales comme à la méthode précédente. Ensuite, on calcule l’écart pour chaque
+        configuration (en pourcentage) entre l’épaisseur exacte et l’épaisseur généré par Freefem++.
+
+        Le résultat semble satisfaisant pour le bécher le plus petit et donc cette méthode pourrait être une alternative
+        de la première dans le cas où la tasse est assez petite ce qui viole les hypothèses du modèle de la coque
+        cylindrique mince.
+
+
+    </p>
+
+    <h4>g. Cas de la anse : </h4>
+    <p>
+        Bien qu’on a pas des formules prêtes et des données suffisantes pour traiter ce cas, on s’est restreint au
+        problème de la présence de l’anse ou pas.
+
+    </p>
+
+    <p>
+        Dans le cas de la présence de l’anse, on constate qu’elle joue le rôle “Tuned mass damper”, qui est un
+        dispositif monté dans les structures (populaire dans les tours) pour réduire les vibrations mécaniques,
+        constitué d'une masse montée sur un ou plusieurs ressorts amortis.
+        <center><img src="src_im/schema20.png"></center>
+    </p>
+
+    <p>
+        Ainsi ce phénomène nous permet de donner une condition suffisante pour détecter l’absence de l’anse comme vous
+        pouvez le voir ci-dessous.
+    </p>
+
+    <center><img src="src_im/schema21.png"></center>
+
+
+    <center><img src="src_im/logoENSTA.png"> <img src="src_im/logoIPT.png"> </center>
+</body>
+</html>

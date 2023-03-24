@@ -1,0 +1,27 @@
+.logo {
+        scale: 20%;
+        margin-top: -24%;
+        margin-bottom: -24%;
+}
+
+.centered {
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+}
+
+table,
+td {
+        border: 1px solid #333;
+        border-collapse: collapse;
+        padding: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+}
+
+thead,
+tfoot {
+        background-color: #333;
+        color: #fff;
+}

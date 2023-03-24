@@ -1,0 +1,3609 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta name="page_type" content="np-template-header-footer-from-plugin">
+		<title>Chaotic magnetic pendulum</title>
+		
+		<link rel="stylesheet" href="nicepage.css" media="screen">
+		<link rel="stylesheet" href="pop-pop-away.css" media="screen">
+		<link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+		
+		<script class="u-script" type="text/javascript" src="jquery-1.9.1.min.js" defer=""></script>
+		<script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+		<meta name="generator" content="Nicepage 3.11.5, nicepage.com">
+		<script type="application/ld+json">{
+			"@context": "http://schema.org",
+			"@type": "Organization",
+			"name": "",
+			"url": "index.html",
+			"logo": "images/Capture.png",
+			"sameAs": [
+					"https://www.facebook.com/ENSTA.Paris/",
+					"https://twitter.com/ENSTAParis?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+					"https://www.instagram.com/enstaparis/?hl=fr",
+					"https://www.facebook.com/ENSTA.Paris/",
+					"https://twitter.com/ENSTAParis?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+					"https://www.instagram.com/enstaparis/?hl=fr",
+					"https://fr.linkedin.com/school/ensta-paris/"
+			]
+		}</script>
+		<meta property="og:title" content="pop pop away">
+		<meta property="og:type" content="website">
+		<meta name="theme-color" content="#b9dfdf">
+		
+		<link rel="canonical" href="index.html">
+		<meta property="og:url" content="index.html">
+		<meta name="twitter:site" content="@">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="pop pop away">
+		<meta name="twitter:description" content="">
+	</head>
+	
+	<body class="u-body" data-style="blank" data-posts="" data-global-section-properties="{&quot;colorings&quot;:{&quot;light&quot;:[&quot;clean&quot;],&quot;colored&quot;:[&quot;clean&quot;],&quot;dark&quot;:[&quot;dark&quot;]}}" data-source="blank" data-page-sections-style="[]" data-page-coloring-types="{&quot;light&quot;:[&quot;clean&quot;],&quot;colored&quot;:[&quot;clean&quot;],&quot;dark&quot;:[&quot;dark&quot;]}" data-page-category="&quot;Basic&quot;" data-back-link="templates" data-back-link-title="Template" data-wp-back-link="wordpress-themes" data-wp-back-link-title="WordPress Themes" data-jm-back-link="joomla-templates" data-jm-back-link-title="Joomla Templates" data-created-with-link="html-website-builder" data-created-with-title="HTML Layout generator" data-wp-created-with-link="wordpress-website-builder" data-wp-created-with-title="WordPress Website Builder" data-jm-created-with-link="joomla-page-builder" data-jm-created-with-title="Joomla Page Builder">	
+		<header class="u-clearfix u-header u-header" id="sec-edd5">
+			<div class="u-clearfix u-sheet u-sheet-1">
+				<nav class="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XL">
+					<div class="menu-collapse" style="font-size: 1rem;">
+						<a class="u-button-style u-nav-link" href="#" style="padding: 4px 0px; font-size: calc(1em + 8px);">
+							<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style="">
+								<use xlink:href="#svg-8a8f">
+								</use>
+							</svg>
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg-8a8f" x="0px" y="0px" viewBox="0 0 302 302" style="enable-background:new 0 0 302 302;" xml:space="preserve" class="u-svg-content">
+								<g>
+									<rect y="36" width="302" height="30"></rect>
+									<rect y="236" width="302" height="30"></rect>
+									<rect y="136" width="302" height="30"></rect>
+								</g>
+							</svg>
+						</a>
+					</div>
+					<!-- Ceci est un paragraphe récupéré dans le code de Charles. Il semble ne rien faire...
+					<div class="u-custom-menu u-nav-container">
+						<ul class="u-nav u-spacing-25 u-unstyled u-nav-1">
+							<li class="u-nav-item">
+								<a class="u-button-style u-nav-link" href="ENSTA-IPT.html" style="padding: 8px 0px;">Page principale</a>
+							</li>
+							<li class="u-nav-item">
+								<a class="u-button-style u-nav-link" href="sujets.html" style="padding: 8px 0px;">Problèmes</a>
+								<div class="u-nav-popup">
+									<ul class="u-h-spacing-20 u-nav u-unstyled u-v-spacing-10 u-nav-2">
+										<li class="u-nav-item">
+											<a class="u-button-style u-nav-link u-white" href="pop-pop-away.html">1er pop-pop away</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="u-nav-item">
+								<a class="u-button-style u-nav-link" href="https://www.ensta-paris.fr/" style="padding: 8px 0px;">ENSTA Paris</a>
+							</li>
+						</ul>
+					</div>
+					-->
+					<div class="u-custom-menu u-nav-container-collapse">
+						<div class="u-align-center u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+							<div class="u-sidenav-overflow">
+								<div class="u-menu-close">
+								</div>
+								<ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-3">
+									<li class="u-nav-item">
+										<a class="u-button-style u-nav-link" href="ENSTA-IPT.html" style="padding: 8px 0px;">Page principale</a>
+									</li>
+									<li class="u-nav-item">
+										<a class="u-button-style u-nav-link" href="sujets-2020-2021.html" style="padding: 8px 0px;">Sujets 2020-2021</a>
+									</li>
+									<li class="u-nav-item">
+										<a class="u-button-style u-nav-link" href="sujets-2020-2021.html" style="padding: 8px 0px;">Sujets 2021-2022</a>
+									</li>
+									<li class="u-nav-item">
+										<a class="u-button-style u-nav-link" href="https://www.ensta-paris.fr/" style="padding: 8px 0px;">ENSTA Paris</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="u-black u-menu-overlay u-opacity u-opacity-70">
+						</div>
+					</div>
+				</nav>
+				<div class="u-social-icons u-spacing-10 u-social-icons-1">
+					<a class="u-social-url" title="https://www.facebook.com/ENSTA.Paris/" target="_blank" href="https://www.facebook.com/ENSTA.Paris/">
+						<span class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1">
+							<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+								<use xlink:href="#svg-2cb8">
+								</use>
+							</svg>
+							<svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-2cb8">
+								<circle fill="currentColor" cx="56.1" cy="56.1" r="55">
+								</circle>
+								<path fill="#FFFFFF" d="M73.5,31.6h-9.1c-1.4,0-3.6,0.8-3.6,3.9v8.5h12.6L72,58.3H60.8v40.8H43.9V58.3h-8V43.9h8v-9.2c0-6.7,3.1-17,17-17h12.5v13.9H73.5z">
+								</path>
+							</svg>
+						</span>
+					</a>
+					<a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/ENSTAParis?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+						<span class="u-icon u-icon-circle u-social-icon u-social-twitter u-icon-2">
+							<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+								<use xlink:href="#svg-a069">
+								</use>
+							</svg>
+							<svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-a069">
+								<circle fill="currentColor" class="st0" cx="56.1" cy="56.1" r="55">
+								</circle>
+								<path fill="#FFFFFF" d="M83.8,47.3c0,0.6,0,1.2,0,1.7c0,17.7-13.5,38.2-38.2,38.2C38,87.2,31,85,25,81.2c1,0.1,2.1,0.2,3.2,0.2 c6.3,0,12.1-2.1,16.7-5.7c-5.9-0.1-10.8-4-12.5-9.3c0.8,0.2,1.7,0.2,2.5,0.2c1.2,0,2.4-0.2,3.5-0.5c-6.1-1.2-10.8-6.7-10.8-13.1 c0-0.1,0-0.1,0-0.2c1.8,1,3.9,1.6,6.1,1.7c-3.6-2.4-6-6.5-6-11.2c0-2.5,0.7-4.8,1.8-6.7c6.6,8.1,16.5,13.5,27.6,14 c-0.2-1-0.3-2-0.3-3.1c0-7.4,6-13.4,13.4-13.4c3.9,0,7.3,1.6,9.8,4.2c3.1-0.6,5.9-1.7,8.5-3.3c-1,3.1-3.1,5.8-5.9,7.4 c2.7-0.3,5.3-1,7.7-2.1C88.7,43,86.4,45.4,83.8,47.3z">
+								</path>
+							</svg>
+						</span>
+					</a>
+					<a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/enstaparis/?hl=fr">
+						<span class="u-icon u-icon-circle u-social-icon u-social-instagram u-icon-3">
+							<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+								<use xlink:href="#svg-06ed">
+								</use>
+							</svg>
+							<svg class="u-svg-content" viewBox="0 0 112 112" x="0" y="0" id="svg-06ed">
+								<circle fill="currentColor" cx="56.1" cy="56.1" r="55">
+								</circle>
+								<path fill="#FFFFFF" d="M55.9,38.2c-9.9,0-17.9,8-17.9,17.9C38,66,46,74,55.9,74c9.9,0,17.9-8,17.9-17.9C73.8,46.2,65.8,38.2,55.9,38.2 z M55.9,66.4c-5.7,0-10.3-4.6-10.3-10.3c-0.1-5.7,4.6-10.3,10.3-10.3c5.7,0,10.3,4.6,10.3,10.3C66.2,61.8,61.6,66.4,55.9,66.4z">
+								</path>
+								<path fill="#FFFFFF" d="M74.3,33.5c-2.3,0-4.2,1.9-4.2,4.2s1.9,4.2,4.2,4.2s4.2-1.9,4.2-4.2S76.6,33.5,74.3,33.5z">
+								</path>
+								<path fill="#FFFFFF" d="M73.1,21.3H38.6c-9.7,0-17.5,7.9-17.5,17.5v34.5c0,9.7,7.9,17.6,17.5,17.6h34.5c9.7,0,17.5-7.9,17.5-17.5V38.8 C90.6,29.1,82.7,21.3,73.1,21.3z M83,73.3c0,5.5-4.5,9.9-9.9,9.9H38.6c-5.5,0-9.9-4.5-9.9-9.9V38.8c0-5.5,4.5-9.9,9.9-9.9h34.5 c5.5,0,9.9,4.5,9.9,9.9V73.3z">
+								</path>
+							</svg>
+						</span>
+					</a>
+				</div>
+				<a href="https://www.ensta-paris.fr/" class="u-image u-logo u-image-1" data-image-width="344" data-image-height="142" title="https://www.ensta-paris.fr/">
+					<img src="images/Capture.png" class="u-logo-image u-logo-image-1" data-image-width="195">
+				</a>
+			</div>
+		</header>
+	
+		<section class=" u-block-59cc-3" custom-posts-hash="[]" data-style="blank" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" id="sec-7c55" data-source="Blank" data-id="59cc">
+				<div class=" u-sheet u-block-59cc-2">
+					<img class="u-absolute-hcenter u-image u-block-59cc-4" src="images/pendule/ipt1.png" data-image-width="1080" data-image-height="580">
+				</div>
+				<style data-mode="XL">@media (min-width: 1200px) {
+					.u-block-59cc-2 {
+					min-height: 595px;
+					}
+					.u-block-59cc-4 {
+					width: 650px;
+					object-position: 0% 50%;
+					}
+				}</style>
+				<style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+					.u-block-59cc-2 {
+					min-height: 595px;
+					}
+					.u-block-59cc-4 {
+					width: 570px;
+					object-position: 50% 0%;
+					left: 315px;
+					right: auto;
+					}
+				}</style>
+				<style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+					.u-block-59cc-2 {
+					min-height: 595px;
+					}
+					.u-block-59cc-4 {
+					width: 570px;
+					object-position: 50% 0%;
+					left: 315px;
+					right: auto;
+					}
+				}</style>
+				<style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+					.u-block-59cc-2 {
+					min-height: 565px;
+					}
+					.u-block-59cc-4 {
+					width: 540px;
+					object-position: 50% 0%;
+					left: 315px;
+					right: auto;
+					}
+				}</style>
+				<style data-mode="XS">@media (max-width: 575px) {
+					.u-block-59cc-2 {
+					min-height: 365px;
+					}
+					.u-block-59cc-4 {
+					width: 340px;
+					object-position: 50% 0%;
+					left: 315px;
+					right: auto;
+					}
+				}</style>
+		</section>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="u-clearfix u-white u-block-3395-1" custom-posts-hash="T" data-posts-content="[{'images':[],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':331,'id':1,'headingProp':'h3','textProp':'text'}]" data-id="3395" data-style="1-col-text-new" id="sec-b9e7">
+			<div class=" u-sheet ">
+				 
+					
+							<div class="u-size-30"> 
+								
+									<div class="u-container-style u-layout-cell u-size-60 u-block-3395-8">
+										<div class="u-container-layout u-block-3395-9">
+											<h3 class="u-text u-text-default u-block-3395-14">Teaser</h3>
+											<p class="u-text u-text-default u-block-3395-15">​
+												<video width="500px" height="500px" 
+        controls="controls"/> 
+          
+        <source src="images/pendule/IPT_TrailerFINAL2.mp4" 
+            type="video/mp4"> 
+                        </div>
+
+
+											</p>
+										
+								
+							</div>
+							
+						
+					</div>
+				</div>
+			</div>
+			<style data-mode="XL">@media (min-width: 1200px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 549px;
+				}
+				.u-block-3395-5 {
+				margin-top: 96px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				min-height: 216px;
+				margin-top: 0;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 216px;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 150px;
+				}
+				.u-block-3395-17 {
+				min-height: 216px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 479px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 156px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 178px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 178px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 178px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 640px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 156px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 100px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 136px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 136px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 955px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 156px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 100px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 204px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 204px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="XS">@media (max-width: 575px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 745px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 149px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 100px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 128px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 128px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+		</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		<section class="u-clearfix u-white u-block-3395-1" custom-posts-hash="T" data-posts-content="[{'images':[],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':331,'id':1,'headingProp':'h3','textProp':'text'}]" data-id="3395" data-style="1-col-text-new" id="sec-b9e7">
+			<div class="u-clearfix u-sheet u-block-3395-2">
+				<div class="u-clearfix u-expanded-width u-layout-wrap u-block-3395-5">
+					<div class="u-layout"> 
+						<div class="u-layout-col">
+							<div class="u-size-30"> 
+								<div class="u-layout-row">
+									<div class="u-container-style u-layout-cell u-size-60 u-block-3395-8">
+										<div class="u-container-layout u-block-3395-9">
+											<h3 class="u-text u-text-default u-block-3395-14">Introduction</h3>
+											<p class="u-text u-text-default u-block-3395-15">​
+												Aujourd’hui, nous savons parfaitement simuler la dynamique de certains phénomènes comme le pendule simple, ou comme la trajectoire de la chute d’un ballon. Et pourtant, nous sommes incapables de prédire la météo à des échelles de temps au-delà du mois : il s’agit en effet d’un phénomène chaotique. 
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="u-size-30">
+								<div class="u-layout-row">
+									<div class="u-container-style u-layout-cell u-size-30 u-block-3395-10">
+										<div class="u-container-layout u-block-3395-11">
+											<img class="u-absolute-hcenter u-expanded-height u-image u-block-3395-16" src="images/pendule/ipt2.png" data-image-width="204" data-image-height="269">
+										</div>
+									</div>
+									<div class="u-container-style u-layout-cell u-size-30 u-block-3395-17">
+										<div class="u-container-layout u-block-3395-18">
+											<img class="u-absolute-hcenter u-expanded-height u-image u-block-3395-19" src="images/pendule/ipt3.png" data-image-width="477" data-image-height="272">
+										</div>
+									</div>
+								</div>
+							</div>
+                            <p class="u-text u-text-default u-block-3395-15">​
+                                                Les systèmes chaotiques peuvent être définis par une extrême sensibilité aux conditions initiales (on souligne le fait que ce n’est pas de l’aléatoire), en effet on parle de chaos lorsque 2 conditions initiales très proches mènent à 2 résultats très différents. Cependant, ce n’est pas l’unique manière de quantifier le chaos, cette étude en présentera d’autres.
+ 
+                                            </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<style data-mode="XL">@media (min-width: 1200px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 549px;
+				}
+				.u-block-3395-5 {
+				margin-top: 96px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				min-height: 216px;
+				margin-top: 0;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 216px;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 150px;
+				}
+				.u-block-3395-17 {
+				min-height: 216px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 479px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 156px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 178px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 178px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 178px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 640px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 156px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 100px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 136px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 136px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 955px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 156px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 100px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 204px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 204px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="XS">@media (max-width: 575px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 745px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 149px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 100px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 128px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 128px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+		</section>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="u-clearfix u-block-d32a-1" custom-posts-hash="[[I,T],[I,T]]" data-post-id="238574804;238574804" data-section-properties="{&quot;stretch&quot;:true}" data-id="d32a" data-posts-content="[{'images':[[575,315]],'maps':[],'videos':[],'icons':[],'textWidth':565,'textHeight':305,'id':1,'groupId':2,'headingProp':'h2','textProp':'text'},{'images':[[575,315]],'maps':[],'videos':[],'icons':[],'textWidth':565,'textHeight':305,'id':1,'groupId':2,'headingProp':'h2','textProp':'text'}]" data-style="squares-2x2" id="sec-7b4b">
+            <div class="u-clearfix u-sheet u-block-d32a-2" data-height-sm="1580">
+            
+            <h3 class="u-text u-block-d32a-14">Modèle et Mise en équations <br>
+    </h3>
+    <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-block-d32a-3">
+                <div class="u-layout">
+                <div class="u-layout-col">
+                	<div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> Le système que nous considérons est donc le pendule. Commençons par établir les équations dynamiques qui régissent notre modèle.<br>
+Bilan des forces :<br>
+<u>Force gravitationnelle :</u><br>
+Dans notre modèle, nous avons considéré pour la force gravitationnelle une simple force de rappel unitaire -x.<br>
+<u>Force magnétique :</u> <br>
+Pour nos aimants, nous nous plaçons dans l’approximation des dipôles magnétiques, on considère donc naturellement une force magnétique en 1 / distance^4.<br>
+<u>Force de frottements (Dissipation d’énergie)</u><br>
+    On considère un coefficient de frottement simple alpha.
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="  u-image u-block-d32a-19" src="images/pendule/ipt15.png" data-image-width="525" data-image-height="500" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15">On applique alors le Principe Fondamental de la Dynamique, et on obtient l’équation de la dynamique. On peut alors faire une simulation numérique de notre pendule ! <br>
+                            	Cependant, cette équation est donc une équation différentielle du second ordre. Dans le cas où nous ne considérons pas les frottements, il n’y a pas de dissipation d’énergie. <br>
+                            	On peut alors se placer dans le cadre de la dynamique Hamiltonienne, toutes les forces considérées sont conservatives. Les équations de Lagrange nous permettent alors de nous ramener à des équations différentielles du premier ordre.
+
+</p>
+                            
+                        </div>
+                        </div>
+                        <div > <video width="500px" height="500px" 
+        controls="controls"/> 
+          
+        <source src="images/pendule/ipt18.mp4" 
+            type="video/mp4"> 
+                        </div>
+                    </div>
+                    </div>
+
+
+<div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> 
+On considère alors les variables d’états (x, y, px, py), et les équations de Lagrange nous donnent alors l'expression ci-contre.
+
+Celles-ci nous seront utiles dans notre étude sans dissipation d’énergie.
+
+
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="u-absolute-hcenter  u-image u-block-d32a-19" src="images/pendule/ipt16.png" data-image-width="525" data-image-height="376" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
+                </div>
+            </div>
+    </div>
+            <style data-mode="XL" data-visited="true">@media (min-width: 1200px) {
+            .u-block-d32a-2 {
+            min-height: 802px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 695px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 315px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 55px;
+            padding-right: 55px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 345px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 60px;
+            padding-right: 60px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 80% 67.56%;
+            width: 904px;
+            }
+        }</style>
+            <style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+            .u-block-d32a-2 {
+            min-height: 686px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 495px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 315px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 55px;
+            padding-right: 55px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 315px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 60px;
+            padding-right: 60px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 80% 67.56%;
+            width: 904px;
+            }
+        }</style>
+            <style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+            .u-block-d32a-2 {
+            min-height: 540px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 275px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 80% 67.56%;
+            width: 904px;
+            }
+        }</style>
+            <style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+            .u-block-d32a-2 {
+            min-height: 940px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 95px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 80% 67.56%;
+            width: 904px;
+            }
+        }</style>
+            <style data-mode="XS">@media (max-width: 575px) {
+            .u-block-d32a-2 {
+            min-height: 718px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 80% 67.56%;
+            width: 904px;
+            }
+        }</style>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="u-clearfix u-block-2ba9-1" custom-posts-hash="[[I,T],[I,T],[I,T]]" data-section-properties="{&quot;margin&quot;:&quot;none&quot;,&quot;stretch&quot;:true}" data-id="2ba9" data-posts-content="[{'images':[[320,213]],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':552,'id':1,'groupId':2,'headingProp':'h3','textProp':'text'},{'images':[[320,213]],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':552,'id':1,'groupId':2,'headingProp':'h3','textProp':'text'},{'images':[[320,213]],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':552,'id':1,'groupId':2,'headingProp':'h3','textProp':'text'}]" data-style="list-2" id="sec-6989">
+			<div class="u-clearfix u-sheet u-block-2ba9-2" data-height-lg="408.2105263157894" data-height-md="342.42105263157885">
+			
+			<h3 class="u-text u-block-2ba9-10">Montage expérimental réalisé<br>
+	</h3>
+	<div class="u-clearfix u-expanded-width u-layout-wrap u-block-2ba9-3">
+	<div class="u-gutter-0 u-layout">  <div class="u-layout-row">
+	<div class="u-container-style u-layout-cell u-size-25 u-block-2ba9-4">
+	<div class="u-container-layout u-block-2ba9-5">
+		<p class="u-text u-block-2ba9-11">​​Nous avons tout d’abord construit une structure en métal, sur laquelle nous avons ensuite fixé une plaque en plexiglass. La tige en métal constituant le pendule a été fixée à l’aide d’un fil de pêche afin de minimiser les frottements. Au bout de cette tige, nous avons fixé un aimant entouré d’une balle de tennis de table afin de faciliter le traitement d’image. Nous avons utilisé différentes configurations d’aimants lors de nos expériences, ainsi pour pouvoir les fixer et pour pouvoir toujours être capable de les déplacer ensuite, nous avons placé à chaque fois les aimants de part et d’autre de la plaque. 
+Afin de faciliter le traitement d’image, nous avons ajouté 2 écrans blancs comme lumière et recouvert notre expérience d’un drap noir. Nous avons de plus construit un système de lancement avec un électroaimant pour que nos expériences soient le plus reproductibles possibles. 
+
+</p>
+	</div>
+	</div>
+		<div class="u-container-style u-layout-cell u-size-35 u-block-2ba9-12">
+	<div class="u-container-layout u-block-2ba9-13">
+		<img class=" u-image u-block-2ba9-14" src="images/pendule/ipt4.png" data-image-width="1031" data-image-height="904">
+	<img class="u-expanded-width u-image u-image-default u-block-2ba9-15" src="images/pendule/ipt5.png" alt="" data-image-width="564" data-image-height="423">
+	</div>
+	</div>  </div>
+	</div>
+	</div>
+	</div>
+			<style data-mode="XL">@media (min-width: 1200px) {
+			.u-block-2ba9-2 {
+			min-height: 654px;
+			}
+			.u-block-2ba9-10 {
+			margin-top: 30px;
+			margin-right: 679px;
+			margin-bottom: 0;
+			margin-left: 30px;
+			}
+			.u-block-2ba9-3 {
+			margin-top: 30px;
+			margin-bottom: 0;
+			}
+			.u-block-2ba9-4 {
+			min-height: 558px;
+			}
+			.u-block-2ba9-5 {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			}
+			.u-block-2ba9-11 {
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-left: 0;
+			margin-right: 0;
+			}
+			.u-block-2ba9-12 {
+			min-height: 558px;
+			}
+			.u-block-2ba9-13 {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			}
+			.u-block-2ba9-14 {
+			object-position: 100% 50%;
+			height: 500px;
+			margin-top: 0;
+			margin-bottom: 0;
+			}
+			.u-block-2ba9-15 {
+			height: 232px;
+			margin-bottom: 0;
+			margin-top: 1px;
+			object-position: 100% 30.03%;
+			}
+		}</style>
+			<style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+			.u-block-2ba9-2 {
+			min-height: 642px;
+			}
+			.u-block-2ba9-10 {
+			margin-top: 30px;
+			margin-right: 509px;
+			margin-bottom: 0;
+			margin-left: 0;
+			}
+			.u-block-2ba9-3 {
+			position: relative;
+			margin-top: 30px;
+			margin-bottom: 0;
+			}
+			.u-block-2ba9-4 {
+			min-height: 460px;
+			}
+			.u-block-2ba9-5 {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			}
+			.u-block-2ba9-11 {
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-left: 0;
+			margin-right: 0;
+			}
+			.u-block-2ba9-12 {
+			min-height: 460px;
+			}
+			.u-block-2ba9-13 {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			}
+			.u-block-2ba9-14 {
+			object-position: 100% 50%;
+			height: 700px;
+			margin-top: 0;
+			margin-bottom: 0;
+			}
+			.u-block-2ba9-15 {
+			object-position: 0% 33.29%;
+			height: 191px;
+			margin-top: 1px;
+			margin-bottom: 0;
+			}
+		}</style>
+			<style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+			.u-block-2ba9-2 {
+			min-height: 524px;
+			}
+			.u-block-2ba9-10 {
+			margin-top: 30px;
+			margin-right: 289px;
+			margin-bottom: 0;
+			margin-left: 0;
+			}
+			.u-block-2ba9-3 {
+			position: relative;
+			margin-top: 30px;
+			margin-bottom: 0;
+			}
+			.u-block-2ba9-4 {
+			min-height: 100px;
+			}
+			.u-block-2ba9-5 {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			}
+			.u-block-2ba9-11 {
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-left: 0;
+			margin-right: 0;
+			}
+			.u-block-2ba9-12 {
+			min-height: 352px;
+			}
+			.u-block-2ba9-13 {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			}
+			.u-block-2ba9-14 {
+			object-position: 100% 50%;
+			height: 702px;
+			margin-top: 0;
+			margin-bottom: 0;
+			}
+			.u-block-2ba9-15 {
+			object-position: 0% 33.29%;
+			height: 146px;
+			margin-top: 1px;
+			margin-bottom: 0;
+			}
+		}</style>
+			<style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+			.u-block-2ba9-2 {
+			min-height: 734px;
+			}
+			.u-block-2ba9-10 {
+			margin-top: 30px;
+			margin-right: 109px;
+			margin-bottom: 0;
+			margin-left: 0;
+			}
+			.u-block-2ba9-3 {
+			position: relative;
+			margin-top: 30px;
+			margin-bottom: 0;
+			}
+			.u-block-2ba9-4 {
+			min-height: 100px;
+			}
+			.u-block-2ba9-5 {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			}
+			.u-block-2ba9-11 {
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-left: 0;
+			margin-right: 0;
+			}
+			.u-block-2ba9-12 {
+			min-height: 578px;
+			}
+			.u-block-2ba9-13 {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			}
+			.u-block-2ba9-14 {
+			object-position: 100% 50%;
+			height: 764px;
+			margin-top: 0;
+			margin-bottom: 0;
+			}
+			.u-block-2ba9-15 {
+			object-position: 0% 33.29%;
+			height: 188px;
+			margin-top: 1px;
+			margin-bottom: 0;
+			}
+		}</style>
+			<style data-mode="XS">@media (max-width: 575px) {
+			.u-block-2ba9-2 {
+			min-height: 551px;
+			}
+			.u-block-2ba9-10 {
+			margin-top: 30px;
+			margin-right: 0;
+			margin-bottom: 0;
+			margin-left: 0;
+			}
+			.u-block-2ba9-3 {
+			position: relative;
+			margin-top: 30px;
+			margin-bottom: 0;
+			}
+			.u-block-2ba9-4 {
+			min-height: 100px;
+			}
+			.u-block-2ba9-5 {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			}
+			.u-block-2ba9-11 {
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-left: 0;
+			margin-right: 0;
+			}
+			.u-block-2ba9-12 {
+			min-height: 364px;
+			}
+			.u-block-2ba9-13 {
+			padding-top: 0;
+			padding-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+			}
+			.u-block-2ba9-14 {
+			object-position: 100% 50%;
+			height: 766px;
+			margin-top: 0;
+			margin-bottom: 0;
+			}
+			.u-block-2ba9-15 {
+			object-position: 0% 33.29%;
+			height: 118px;
+			margin-top: 1px;
+			margin-bottom: 0;
+			}
+		}</style>
+		</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		<section class="u-clearfix u-white u-block-3395-1" custom-posts-hash="T" data-posts-content="[{'images':[],'maps':[],'videos':[],'icons':[],'textWidth':1140,'textHeight':331,'id':1,'headingProp':'h3','textProp':'text'}]" data-id="3395" data-style="1-col-text-new" id="sec-b9e7">
+			<div class=" u-sheet ">
+				 
+					
+							<div class="u-size-30"> 
+								
+									<div class="u-container-style u-layout-cell u-size-60 u-block-3395-8">
+										<div class="u-container-layout u-block-3395-9">
+											<h3 class="u-text u-text-default u-block-3395-14">Résultat et Observation</h3>
+											<p class="u-text u-text-default u-block-3395-15">​
+												Le pendule magnétique est un système chaotique : la plus légère variation des conditions initiales entraîne de grands changements de trajectoire. Il ne nous était donc pas possible de reproduire nos expériences : même si on lâchait le pendule au même endroit, la trajectoire prise par celui-ci serait à chaque fois complètement différente. Nous avons donc mesuré une valeur qui ne change pas en fonction des expériences : le coefficient de frottement. On détermine ce coefficient en calculant l’Hamiltonien, en effet la décroissance exponentielle expérimentale de l’énergie représente le coefficient de frottement théorique. Nous avons trouvé des coefficients identiques lors de chacune de nos expériences, ce qui témoigne de l’invariance du coefficient et donc du fait que notre expérience est déterminée théoriquement.
+
+
+											</p>
+										
+								
+							</div>
+							
+						
+					</div>
+				</div>
+			</div>
+			<style data-mode="XL">@media (min-width: 1200px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 549px;
+				}
+				.u-block-3395-5 {
+				margin-top: 96px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				min-height: 216px;
+				margin-top: 0;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 216px;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 150px;
+				}
+				.u-block-3395-17 {
+				min-height: 216px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 479px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 156px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 178px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 178px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 178px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 640px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 156px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 100px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 136px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 136px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 30px;
+				padding-right: 30px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 955px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 156px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 100px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 204px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 204px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+			<style data-mode="XS">@media (max-width: 575px) {
+				.u-block-3395-1 {
+				background-image: none;
+				}
+				.u-block-3395-2 {
+				min-height: 745px;
+				}
+				.u-block-3395-5 {
+				position: relative;
+				margin-top: 149px;
+				margin-bottom: 50px;
+				}
+				.u-block-3395-8 {
+				margin-top: 0;
+				min-height: 100px;
+				}
+				.u-block-3395-9 {
+				padding-top: 26px;
+				padding-bottom: 26px;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-14 {
+				margin-bottom: 0;
+				margin-top: 0;
+				}
+				.u-block-3395-15 {
+				margin-top: 21px;
+				margin-right: auto;
+				margin-bottom: 0;
+				margin-left: 0;
+				}
+				.u-block-3395-10 {
+				min-height: 128px;
+				background-position: 50% 87.57%;
+				margin-top: 0;
+				}
+				.u-block-3395-11 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 0;
+				padding-right: 0;
+				}
+				.u-block-3395-16 {
+				object-position: 47.15% 97.43%;
+				width: 320px;
+				}
+				.u-block-3395-17 {
+				min-height: 128px;
+				}
+				.u-block-3395-18 {
+				padding-top: 0;
+				padding-bottom: 0;
+				padding-left: 10px;
+				padding-right: 10px;
+				}
+				.u-block-3395-19 {
+				width: 370px;
+				}
+			}</style>
+		</section>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="u-clearfix u-block-d32a-1" custom-posts-hash="[[I,T],[I,T]]" data-post-id="238574804;238574804" data-section-properties="{&quot;stretch&quot;:true}" data-id="d32a" data-posts-content="[{'images':[[575,315]],'maps':[],'videos':[],'icons':[],'textWidth':565,'textHeight':305,'id':1,'groupId':2,'headingProp':'h2','textProp':'text'},{'images':[[575,315]],'maps':[],'videos':[],'icons':[],'textWidth':565,'textHeight':305,'id':1,'groupId':2,'headingProp':'h2','textProp':'text'}]" data-style="squares-2x2" id="sec-7b4b">
+            <div class="u-clearfix u-sheet u-block-d32a-2" data-height-sm="1580">
+            
+            <h3 class="u-text u-block-d32a-14">Sections de Poincaré<br>
+    </h3>
+    <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-block-d32a-3">
+                <div class="u-layout">
+                <div class="u-layout-col">
+                	<div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> Dans cette partie nous allons nous intéresser aux sections de poincaré, cas d’étude où les frottements ne sont pas considérés.. Le principe est simple, nous nous plaçons dans l’espace des phases (ici de dimension 4 : x, y, px, py).
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="u-absolute-hcenter  u-image u-block-d32a-19" src="images/pendule/ipt6.png" data-image-width="525" data-image-height="376" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> On prend une section de l’espace des phases, par exemple le plan x et px, si l’intersection de la trajectoire avec ce plan est de mesure non-nulle (c’est-à-dire qu’une surface est formée) alors la trajectoire est considérée chaotique. (Intuitivement, la trajectoire dans l’espace des phases prend une infinité de valeurs sans repasser par les mêmes points). 
+Dans le cas de faibles énergies (par exemple en prenant des conditions initiales peu éloignées du centre du pendule), l’intersection formée est une surface donc la trajectoire est considérée comme chaotique. 
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="u-absolute-hcenter  u-image u-block-d32a-19" src="images/pendule/ipt7.png" data-image-width="525" data-image-height="376" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+<div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> Dans le cas des hautes énergies, on retrouve certaines intersections qui forment des motifs plutôt de dimension 1, par exemple des cercles. Dans ce cas-là, on retrouve des trajectoires davantage périodiques. On peut interpréter cela par le fait qu’aux hautes énergies le bob est moins influencé par les aimants.
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="u-absolute-hcenter  u-image u-block-d32a-19" src="images/pendule/ipt8.png" data-image-width="525" data-image-height="376" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
+                </div>
+            </div>
+    </div>
+            <style data-mode="XL" data-visited="true">@media (min-width: 1200px) {
+            .u-block-d32a-2 {
+            min-height: 802px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 695px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 315px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 55px;
+            padding-right: 55px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 345px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 60px;
+            padding-right: 60px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 424px;
+            }
+        }</style>
+            <style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+            .u-block-d32a-2 {
+            min-height: 686px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 495px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 315px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 55px;
+            padding-right: 55px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 315px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 60px;
+            padding-right: 60px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+            <style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+            .u-block-d32a-2 {
+            min-height: 540px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 275px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+            <style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+            .u-block-d32a-2 {
+            min-height: 940px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 95px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+            <style data-mode="XS">@media (max-width: 575px) {
+            .u-block-d32a-2 {
+            min-height: 718px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="u-clearfix u-block-d32a-1" custom-posts-hash="[[I,T],[I,T]]" data-post-id="238574804;238574804" data-section-properties="{&quot;stretch&quot;:true}" data-id="d32a" data-posts-content="[{'images':[[575,315]],'maps':[],'videos':[],'icons':[],'textWidth':565,'textHeight':305,'id':1,'groupId':2,'headingProp':'h2','textProp':'text'},{'images':[[575,315]],'maps':[],'videos':[],'icons':[],'textWidth':565,'textHeight':305,'id':1,'groupId':2,'headingProp':'h2','textProp':'text'}]" data-style="squares-2x2" id="sec-7b4b">
+            <div class="u-clearfix u-sheet u-block-d32a-2" data-height-sm="1580">
+            
+            <h3 class="u-text u-block-d32a-14">Coefficients de Lyapunov (ou FLI)<br>
+    </h3>
+    <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-block-d32a-3">
+                <div class="u-layout">
+                <div class="u-layout-col">
+                	<div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> Lorsqu’il n’y a pas de frottements, il n’y a pas dissipation d’énergie et notre pendule reste en mouvement. Cependant, la dynamique reste chaotique. Il existe un exposant, qui s’appelle l’exposant de Lyapunov, qui quantifie la différence entre deux trajectoires pour des conditions initiales extrêmement proches.
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="u-absolute-hcenter  u-image u-block-d32a-19" src="images/pendule/ipt9.png" data-image-width="525" data-image-height="376" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> Il est très difficile à calculer en général, mais il peut être approché par le Fast Lyapunov Indicator (FLI).
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="u-absolute-hcenter  u-image u-block-d32a-19" src="images/pendule/ipt10.png" data-image-width="525" data-image-height="376" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+<div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> On peut ainsi cartographier une valeur approximative de l’exposant, en fonction des conditions initiales. Sur cette carte, l’exposant de Lyapunov est toujours positif, le système est donc chaotique. Les zones jaunes, où l’exposant atteint de hautes valeurs, indiquent que dans ces zones le système est d’autant plus sensible à ses conditions initiales. 
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="u-absolute-hcenter  u-image u-block-d32a-19" src="images/pendule/ipt11.png" data-image-width="525" data-image-height="376" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
+                </div>
+            </div>
+    </div>
+            <style data-mode="XL" data-visited="true">@media (min-width: 1200px) {
+            .u-block-d32a-2 {
+            min-height: 802px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 695px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 315px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 55px;
+            padding-right: 55px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 345px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 60px;
+            padding-right: 60px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 424px;
+            }
+        }</style>
+            <style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+            .u-block-d32a-2 {
+            min-height: 686px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 495px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 315px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 55px;
+            padding-right: 55px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 315px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 60px;
+            padding-right: 60px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+            <style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+            .u-block-d32a-2 {
+            min-height: 540px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 275px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+            <style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+            .u-block-d32a-2 {
+            min-height: 940px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 95px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+            <style data-mode="XS">@media (max-width: 575px) {
+            .u-block-d32a-2 {
+            min-height: 718px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section class="u-clearfix u-block-d32a-1" custom-posts-hash="[[I,T],[I,T]]" data-post-id="238574804;238574804" data-section-properties="{&quot;stretch&quot;:true}" data-id="d32a" data-posts-content="[{'images':[[575,315]],'maps':[],'videos':[],'icons':[],'textWidth':565,'textHeight':305,'id':1,'groupId':2,'headingProp':'h2','textProp':'text'},{'images':[[575,315]],'maps':[],'videos':[],'icons':[],'textWidth':565,'textHeight':305,'id':1,'groupId':2,'headingProp':'h2','textProp':'text'}]" data-style="squares-2x2" id="sec-7b4b">
+            <div class="u-clearfix u-sheet u-block-d32a-2" data-height-sm="1580">
+            
+            <h3 class="u-text u-block-d32a-14">Bassins d'attraction et de Wada<br>
+    </h3>
+    <div class="u-clearfix u-expanded-width u-gutter-10 u-layout-wrap u-block-d32a-3">
+                <div class="u-layout">
+                <div class="u-layout-col">
+                	<div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> Lors des expériences avec le montage, et donc avec la présence de dissipation d’énergie, la destination finale de la tige variait entre les aimants attractifs pour des conditions initiales proches. Ces positions sont les positions d’équilibre.
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="u-absolute-hcenter  u-image u-block-d32a-19" src="images/pendule/ipt12.png" data-image-width="525" data-image-height="376" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    <div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> On peut donc réaliser une multitude de simulations numériques, puis cartographier leur position finale par des couleurs, en fonction de la position initiale de la tige. Par exemple, les zones vertes indiquent que lorsque la tige est lancée depuis cette zone, la tige atteint l’équilibre au niveau de l’aimant “vert”. 
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="u-absolute-hcenter  u-image u-block-d32a-19" src="images/pendule/ipt13.png" data-image-width="525" data-image-height="376" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+<div class="u-size-30">
+                    <div class="u-layout-row">
+                        <div class="u-align-left u-container-style u-layout-cell u-left-cell u-size-30 u-block-d32a-8">
+                        <div class="u-container-layout u-valign-middle u-block-d32a-9">
+                            
+                            <p class="u-text u-block-d32a-15"> 
+Lorsque l’on regarde les bassins d’attraction, on remarque qu’ils possèdent une propriété particulière : ce sont des bassins de Wada. En effet, entre 2 zones de couleurs différentes, il y aura toujours une autre couleur entre les 2 : toutes les zones colorées partagent la même frontière. 
+
+</p>
+                            
+                        </div>
+                        </div>
+                        <div class="u-container-style u-layout-cell u-right-cell u-size-30 u-block-d32a-10" src="">
+                        <div class="u-container-layout u-block-d32a-11">
+    <img class="u-absolute-hcenter  u-image u-block-d32a-19" src="images/pendule/ipt14.png" data-image-width="525" data-image-height="376" data-brightness="">
+    </div>
+                        </div>
+                    </div>
+                    </div>
+
+
+                </div>
+                </div>
+            </div>
+    </div>
+            <style data-mode="XL" data-visited="true">@media (min-width: 1200px) {
+            .u-block-d32a-2 {
+            min-height: 802px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 695px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 315px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 55px;
+            padding-right: 55px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 345px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 60px;
+            padding-right: 60px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 424px;
+            }
+        }</style>
+            <style data-mode="LG">@media (max-width: 1199px) and (min-width: 992px) {
+            .u-block-d32a-2 {
+            min-height: 686px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 495px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 315px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 55px;
+            padding-right: 55px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 315px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 60px;
+            padding-right: 60px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+            <style data-mode="MD">@media (max-width: 991px) and (min-width: 768px) {
+            .u-block-d32a-2 {
+            min-height: 540px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 275px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+            padding-right: 30px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+            <style data-mode="SM">@media (max-width: 767px) and (min-width: 576px) {
+            .u-block-d32a-2 {
+            min-height: 940px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 95px;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+            <style data-mode="XS">@media (max-width: 575px) {
+            .u-block-d32a-2 {
+            min-height: 718px;
+            }
+            .u-block-d32a-14 {
+            margin-top: 31px;
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            }
+            .u-block-d32a-3 {
+            margin-top: 31px;
+            margin-bottom: 54px;
+            }
+            .u-block-d32a-4 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-5 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-18 {
+            object-position: 50% 2.4%;
+            width: 283px;
+            }
+            .u-block-d32a-6 {
+            min-height: 100px;
+            }
+            .u-block-d32a-7 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-13 {
+            margin-top: 92px;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 0;
+            }
+            .u-block-d32a-8 {
+            min-height: 100px;
+            }
+            .u-block-d32a-9 {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 10px;
+            padding-right: 10px;
+            }
+            .u-block-d32a-15 {
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 0;
+            margin-right: 0;
+            }
+            .u-block-d32a-10 {
+            min-height: 315px;
+            background-position: 50% 50%;
+            }
+            .u-block-d32a-11 {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 0;
+            padding-right: 0;
+            }
+            .u-block-d32a-19 {
+            object-position: 50% 67.56%;
+            width: 283px;
+            }
+        }</style>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		<footer class="u-clearfix u-footer u-palette-3-base u-footer" id="sec-f2e8">
+			<div class="u-clearfix u-sheet u-sheet-1">
+				<div class="u-align-center u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
+					<div class="u-container-layout u-valign-middle-md">
+						<p class="u-text u-text-1">Fondée en 1741 afin de former des ingénieurs-constructeurs de marine, l’ENSTA Paris a depuis étendu ses champs de compétence et occupe aujourd’hui une place de premier plan dans le paysage français de l’enseignement supérieur et de la recherche.</p>
+						<div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
+							<a class="u-social-url" target="_blank" href="https://www.facebook.com/ENSTA.Paris/" title="ensta">
+								<span class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1">
+									<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2">
+										<use xlink:href="#svg-181b"></use>
+									</svg>
+									<svg x="0px" y="0px" viewBox="0 0 112.2 112.2" enable-background="new 0 0 112.2 112.2" xml:space="preserve" id="svg-181b" class="u-svg-content">
+										<path d="M75.5,28.8H65.4c-1.5,0-4,0.9-4,4.3v9.4h13.9l-1.5,15.8H61.4v45.1H42.8V58.3h-8.8V42.4h8.8V32.2 c0-7.4,3.4-18.8,18.8-18.8h13.8v15.4H75.5z"></path>
+									</svg>
+								</span>
+							</a>
+							<a class="u-social-url" target="_blank" href="https://twitter.com/ENSTAParis?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" title="https://twitter.com/ENSTAParis?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+								<span class="u-icon u-icon-circle u-social-icon u-social-twitter u-icon-2">
+									<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2">
+										<use xlink:href="#svg-8dd8"></use>
+									</svg>
+									<svg x="0px" y="0px" viewBox="0 0 112.2 112.2" enable-background="new 0 0 112.2 112.2" xml:space="preserve" id="svg-8dd8" class="u-svg-content">
+										<path d="M92.2,38.2c0,0.8,0,1.6,0,2.3c0,24.3-18.6,52.4-52.6,52.4c-10.6,0.1-20.2-2.9-28.5-8.2 c1.4,0.2,2.9,0.2,4.4,0.2c8.7,0,16.7-2.9,23-7.9c-8.1-0.2-14.9-5.5-17.3-12.8c1.1,0.2,2.4,0.2,3.4,0.2c1.6,0,3.3-0.2,4.8-0.7 c-8.4-1.6-14.9-9.2-14.9-18c0-0.2,0-0.2,0-0.2c2.5,1.4,5.4,2.2,8.4,2.3c-5-3.3-8.3-8.9-8.3-15.4c0-3.4,1-6.5,2.5-9.2 c9.1,11.1,22.7,18.5,38,19.2c-0.2-1.4-0.4-2.8-0.4-4.3c0.1-10,8.3-18.2,18.5-18.2c5.4,0,10.1,2.2,13.5,5.7c4.3-0.8,8.1-2.3,11.7-4.5 c-1.4,4.3-4.3,7.9-8.1,10.1c3.7-0.4,7.3-1.4,10.6-2.9C98.9,32.3,95.7,35.5,92.2,38.2z"></path>
+									</svg>
+								</span>
+							</a>
+							<a class="u-social-url" target="_blank" href="https://www.instagram.com/enstaparis/?hl=fr" title="https://www.instagram.com/enstaparis/?hl=fr">
+								<span class="u-icon u-icon-circle u-social-icon u-social-instagram u-icon-3">
+									<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2">
+										<use xlink:href="#svg-ce20"></use>
+									</svg>
+									<svg x="0px" y="0px" viewBox="0 0 112.2 112.2" enable-background="new 0 0 112.2 112.2" xml:space="preserve" id="svg-ce20" class="u-svg-content">
+										<path d="M55.9,32.9c-12.8,0-23.2,10.4-23.2,23.2s10.4,23.2,23.2,23.2s23.2-10.4,23.2-23.2S68.7,32.9,55.9,32.9z M55.9,69.4c-7.4,0-13.3-6-13.3-13.3c-0.1-7.4,6-13.3,13.3-13.3s13.3,6,13.3,13.3C69.3,63.5,63.3,69.4,55.9,69.4z"></path>
+										<path d="M79.7,26.8c-3,0-5.4,2.5-5.4,5.4s2.5,5.4,5.4,5.4c3,0,5.4-2.5,5.4-5.4S82.7,26.8,79.7,26.8z"></path>
+										<path d="M78.2,11H33.5C21,11,10.8,21.3,10.8,33.7v44.7c0,12.6,10.2,22.8,22.7,22.8h44.7c12.6,0,22.7-10.2,22.7-22.7 V33.7C100.8,21.1,90.6,11,78.2,11z M91,78.4c0,7.1-5.8,12.8-12.8,12.8H33.5c-7.1,0-12.8-5.8-12.8-12.8V33.7 c0-7.1,5.8-12.8,12.8-12.8h44.7c7.1,0,12.8,5.8,12.8,12.8V78.4z"></path>
+									</svg>
+								</span>
+							</a>
+							<a class="u-social-url" target="_blank" href="https://fr.linkedin.com/school/ensta-paris/" title="https://fr.linkedin.com/school/ensta-paris/">
+								<span class="u-icon u-icon-circle u-social-icon u-social-linkedin u-icon-4">
+									<svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112.2 112.2">
+										<use xlink:href="#svg-35b2"></use>
+									</svg>
+									<svg x="0px" y="0px" viewBox="0 0 112.2 112.2" enable-background="new 0 0 112.2 112.2" xml:space="preserve" id="svg-35b2" class="u-svg-content">
+										<path d="M33.8,96.8H14.5v-58h19.3V96.8z M24.1,30.9L24.1,30.9c-6.6,0-10.8-4.5-10.8-10.1c0-5.8,4.3-10.1,10.9-10.1 S34.9,15,35.1,20.8C35.1,26.4,30.8,30.9,24.1,30.9z M103.3,96.8H84.1v-31c0-7.8-2.7-13.1-9.8-13.1c-5.3,0-8.5,3.6-9.9,7.1 c-0.6,1.3-0.6,3-0.6,4.8V97H44.5c0,0,0.3-52.6,0-58h19.3v8.2c2.6-3.9,7.2-9.6,17.4-9.6c12.7,0,22.2,8.4,22.2,26.1V96.8z"></path>
+									</svg>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
