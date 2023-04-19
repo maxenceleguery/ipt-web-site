@@ -51,7 +51,7 @@
 
         <body class="u-body">
 
-                <header class="u-clearfix u-header u-header" id="sec-edd5">
+        <header class="u-clearfix u-header u-header" id="sec-edd5">
         <div class="u-clearfix u-sheet u-sheet-1">
         <nav class="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XL">
                 <div class="menu-collapse" style="font-size: 1rem;">
@@ -156,6 +156,152 @@
 
                 <div class="u-clearfix u-sheet u-sheet-1">
 
+                <div class="u-align-center">
+                        <img src="images/1.png" class="centered" style="width: 30%;">
+                </div>
+                The IPTeam proudly presents the 11th problem of the International Tournament of Physicists: The Chalk Trick.
+
+                The phenomenon studied is the following. With a chalk, it is possible to draw continuous lines on a board. However, by varying the angle of contact, the line can turn into a dotted line!
+                <div class="u-align-center">
+                        <img src="images/2.png" class="centered" style="width: 23%;">
+                        <video width="300" autoplay loop muted>
+                                <source src="movies/a.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                </div>
+
+                Let's investigate the phenomenon: what are the parameters? Is it possible to deduce anything about the movement of the chalk or its dimensions from a given line?
+                <div class="u-align-center">
+                        <img src="images/3.png" class="centered" style="width: 35%;">
+                </div>
+
+                It should be noted that this phenomenon is also possible with your finger on a table, or more generally with a stick rubbed on a surface.
+                Actually, this phenomenon is known as the Painlevé Paradox. Paul Painlevé was a mathematician who graduated from the ENS in Paris and who later became a politician. In the 1900s, he formulated the problem of a 3D box tilted and rubbed on a plane. Coulomb's laws being in contradiction with the constraint imposed on the box, the problem has no solution: this is Painlevé's Paradox. The chalk problem comes back to Painlevé's Paradox seen in 2D, a problem studied in the 2000s by Génot and Brogliato.
+                <div class="u-align-center">
+                        <img src="images/4.png" class="centered" style="width: 15%;">
+                        <img src="images/5.png" class="centered" style="width: 25%;">
+                </div>
+
+                We model the problem. We model a hand equipped with a chalk, and moving at a speed v. The arm or wrist is modeled by a spring-damper couple (k,c) to which is attached a mass m2. The fingers holding the chalk and ensuring its rotation in the plane are also modeled by a couple (kθ,cθ). The chalk has a length l, a mass m1, and an initial angle θ.
+                <div class="u-align-center">
+                        <img src="images/6.png" class="centered" style="width: 35%;">
+                </div>
+
+                The phenomenon takes place in 4 stages. A friction phase, a friction-to-flight transition, a flight phase, and a flight-friction transition. Then the phenomenon repeats itself.
+                <div class="u-align-center">
+                        <img src="images/7.png" class="centered" style="width: 35%;">
+                </div>
+
+
+                After we put the problem into equation for each phase, it is possible to obtain numerical simulations! For simple parameters (l=1m, m1=100g,...) we obtain jumps of 3mm every 80ms. We decide to vary the parameters to detect their influence.
+                <div class="u-align-center">
+                        <img src="images/8.png" class="centered" style="width: 35%;">
+                </div>
+                The smaller the chalk, the closer the dotted lines get.
+                <div class="u-align-center">
+                        <img src="images/9.png" class="centered" style="width: 35%;">
+                </div>
+                The greater the force applied to the chalk, the closer the dotted lines get.
+                <div class="u-align-center">
+                        <img src="images/10.png" class="centered" style="width: 35%;">
+                        <img src="images/11.png" class="centered" style="width: 35%;">
+                </div>
+                The angle impacts the height of the jump but very little the distance of the dotted lines.
+                <div class="u-align-center">
+                        <img src="images/12.jpg" class="centered" style="width: 55%;">
+                </div>
+
+                These qualitative observations were consistent with the small experiments we were conducting by hand in the classroom. But to further our experiments, we needed a reproducible procedure. So we designed a robot that makes chalk jumping!
+                <div class="u-align-center">
+                        <img src="images/13.jpg" class="centered" style="width: 35%;">
+                </div>
+                We adopted an orphan board (abandoned at ENSTA), of dimensions 120cm x 100cm. Using a rotating motor and a plexiglass arm recovered from the Yvette laboratory, we tried to draw circles of dotted lines.
+                The configuration is as follows. The motor is fixed to the board and powered by a voltage between 6V and 12V. The plexiglass arm, at the end of which a chalk and an onboard camera are held, is attached to the motor.
+                <div class="u-align-center">
+                        <img src="images/15.png" class="centered" style="width: 23%;">
+                        <img src="images/16.png" class="centered" style="width: 40%;">
+                </div>
+                The motor imposes a speed v, not directly known. In order to determine this speed, we place a white pellet on the arm. Via a video recording, by retracing the movement of this disc, we will arrive at the speed v.
+                We place a Nordcad support with a continuous light and a camera filming in slow motion. The continuous light is necessary to avoid the 50Hz of standard lighting.
+                The plexiglass arm constitutes the spring-damper couple (k,c), i.e. represents the arm or the wrist of the individual.
+                The chalk support constitutes the spring-damper pair (kθ,cθ), i.e., represents the individual's fingers.
+                An initial angle is given to the chalk. Chalk lengths are defined between 50cm and 80cm for reference.
+                We are ready to manipulate!
+
+                Here are the films obtained by the profile camera.
+                <div class="u-align-center">
+                        <video width="40%" autoplay loop muted>
+                                <source src="movies/b.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                        <video width="40%" autoplay loop muted>
+                                <source src="movies/c.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                        <video width="40%" autoplay loop muted>
+                                <source src="movies/d.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                        <video width="40%" autoplay loop muted>
+                                <source src="movies/e.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                </div>
+                Here are the films obtained by the top camera.
+                <div class="u-align-center">
+                        <video width="18%" autoplay loop muted>
+                                <source src="movies/f.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                        <video width="18%" autoplay loop muted>
+                                <source src="movies/g.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                        <video width="18%" autoplay loop muted>
+                                <source src="movies/h.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                        <video width="18%" autoplay loop muted>
+                                <source src="movies/i.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                        <video width="18%" autoplay loop muted>
+                                <source src="movies/j.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                        </video>
+                </div>
+
+                Using these films, we want to trace the distance between two dotted lines. We make more than forty films with the top camera. Each recording gives us the speed over time, and each last image gives us the dotted line at the final instant.
+                Using Matlab, we bin the last image of each recording and remove the anomalies. With each dotted line identified, we go back to the distance between each one, and plot the results obtained.
+                <div class="u-align-center">
+                        <img src="images/17.png" class="centered" style="width: 60%;">
+                </div>
+
+                Here we plot the distance between the dotted lines as a function of speed, for four different forces, F0&lt;F1&lt;F2&lt;F3. The distance varies between 5mm and 8cm.
+                We find qualitatively that the velocity moves the dotted lines further apart, and that the applied force brings them closer together.
+                <div class="u-align-center">
+                        <img src="images/18.png" class="centered" style="width: 60%;">
+                </div>
+
+                Our results on the length of the chalk are not usable due to the small number of experiments. Indeed, it was difficult to maintain the phenomenon when changing lengths, especially for small pieces of chalk.
+                <div class="u-align-center">
+                        <img src="images/19.png" class="centered" style="width: 60%;">
+                </div>
+
+                Contrary to the theoretical prediction, increasing the initial angle moves the dotted lines away.
+                <div class="u-align-center">
+                        <img src="images/20.png" class="centered" style="width: 60%;">
+                </div>
+
+                IPTeam 2023 <br>
+                Christopher WINTERSTEIN,
+                Sami BOUMAIZA,
+                Timothé BRAMAS,
+                Wendy SAN,
+                Yanyu ZHOU <br>
+                Under the supervision of Jérôme PEREZ and Romain MONCHAUX
+
+
                 </div>
 
                 <footer class="u-clearfix u-footer u-palette-3-base u-footer" id="sec-f2e8">
@@ -220,7 +366,7 @@
                                                 </div>
                                         </div>
                                 </div>
-                        </footer>
+                </footer>
         
         </body>
 </html>
