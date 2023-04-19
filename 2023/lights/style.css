@@ -1,0 +1,152 @@
+/* Polices perso */
+@font-face { font-family: SpaceGrotesk; src: url('Fonts/SpaceGrotesk-VariableFont_wght.ttf'); } 
+
+/* Fond */
+body {background-color: rgb(255, 255, 255);}
+
+
+/* Mise en page chapitre, sections... */
+  /* Titre */
+h1 {
+    /* background-color: lightblue; */
+    color: black;
+    font-family: SpaceGrotesk;
+    font-size: 400%;
+    padding: 40px;
+    text-align: right;
+    border: 2px solid black;
+    margin: 20px;
+  }
+
+  /* Section */
+h2 {
+    background-color: #e6eaef;
+    color: #003162;
+    font-family: SpaceGrotesk;
+    font-size: 200%;
+    padding: 0px;
+    text-align: center;
+    border: 2px solid #e6eaef;
+    margin: 20px;
+  }
+
+  /* Sous-section */
+h3 {
+    /* background-color: lightblue; */
+    color: #003162;
+    font-family: SpaceGrotesk;
+    font-size: 200%;
+    padding: -2px;
+    text-align: left;
+    /* border: 2px solid black; */
+    /* margin: 20px; */
+    margin-left: 40px;
+  }
+
+  /* Sous-sous-section */
+h4 {
+    /* background-color: lightblue; */
+    color: #000000;
+    font-family: SpaceGrotesk;
+    font-size: 160%;
+    padding: 0px;
+    text-align: left;
+    /* border: 2px solid black; */
+    /* margin: 20px; */
+    margin-left: 60px;
+  }
+
+  /* Paragraphe */
+h5 {
+    /* background-color: lightblue; */
+    color: #000000;
+    font-family: SpaceGrotesk;
+    font-size: 120%;
+    line-height: 0.1;
+    padding: -10px;
+    text-align: left;
+    /* border: 2px solid black; */
+    /* margin: 20px; */
+    margin-left: 80px;
+  }
+
+/* Text */
+p {
+    /* color: #000000;
+    font-size: 100%;
+    padding: 0px; */
+    text-align: left;
+    margin-left: 60px;
+
+    font-size: inherit;
+    color: inherit;
+    border: initial;
+    /* padding: initial; */
+    font-family: inherit;
+    /* line-height: 0.1; */
+    white-space: pre-wrap;
+  }
+
+
+
+/* Images */
+img {
+     max-width:600px;
+     max-height:600px;
+     width:auto;
+     height:auto;
+    }
+
+
+
+.city {
+     background-color: #ffeae9;
+     color: rgb(0, 0, 0);
+     border: 2px solid #ffeae9;
+     margin: 20px;
+     padding: 20px;
+    }
+
+
+/* Commande de surlignage */
+.SoulRes {
+        background-color: #ffeae9;
+        color: rgb(0, 0, 0);
+        border: 0px solid #ffeae9;
+        
+}
+
+/* Liens */
+a:link {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:visited {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+  }
+a:hover {
+    color: inherit;
+    background-color: #fffdae;
+    text-decoration: none;
+  }
+a:active {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: underline;
+  } 
+
+/* Tableau */
+table, th, td {
+/* border: 1px solid black; */
+border-collapse: collapse;
+}
+th, td {
+padding: 0px;
+text-align: left;
+}
+th {
+text-align: left;
+}
