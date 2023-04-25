@@ -7,17 +7,17 @@ var data = {
                 },
                 {
                         "name" : "Pringles stack ring",
-                        "description" : "",
+                        "description" : "Let's build a ring with Pringles",
                         "linkName" : "pringles"
                 },
                {
                         "name" : "Flapping flag",
-                        "description" : "",
+                        "description" : "Is it possible to build an anenometer only using the sound of a flapping flag ?",
                         "linkName" : "flag"
                 },
                 {
                         "name" : "Mendocino meter",
-                        "description" : "",
+                        "description" : "The Mendocino motor is a solar-powered magnetically levitated electric motor. Can one make a precise illuminance meter based on this motor? ",
                         "linkName" : "mendocino"
                 },
                 {
@@ -27,7 +27,7 @@ var data = {
                 },
                 {
                         "name" : "The chalk trick",
-                        "description" : "",
+                        "description" : "With a chalk, it is possible to draw continuous lines on a board. However, by varying the angle of contact, the line can turn into a dotted line! ",
                         "linkName" : "chalk"
                 },
                 {
@@ -42,7 +42,7 @@ var data = {
                 },
                 {
                         "name" : "Fire-shot-fire",
-                        "description" : "",
+                        "description" : "How to extinguish a flame from a maximum distance ?",
                         "linkName" : "fire"
                 },
                 {
@@ -52,7 +52,7 @@ var data = {
                 },
                 {
                         "name" : "Graphite plasma lamp",
-                        "description" : "",
+                        "description" : "Creation of a plasma ball in a microwave",
                         "linkName" : "plasma"
                 },
         ],
@@ -77,7 +77,7 @@ function addSujet(name, description, linkName,annee) {
 						<div class='u-accordion-pane u-container-style u-accordion-pane-11' id='accordion-6d64' aria-labelledby='link-accordion-6d64'> \n \
 							<div class='u-container-layout u-container-layout-11'> \n \
 								<p class='u-text u-text-default'>"+description+"</p> \n \
-								<a href='./"+annee+"/"+linkName+"/"+linkName+".html' data-page-id='330846' class='u-border-1 u-border-palette-2-base u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-hover-black u-btn-11'>En apprendre plus&nbsp; \n \
+								<a href='./"+annee+"/"+linkName+"/"+linkName+".html' data-page-id='330846' class='u-border-1 u-border-palette-2-base u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-hover-black u-btn-11'>Learn more&nbsp; \n \
 									<span class='u-icon u-icon-22'> \n \
 										<svg class='u-svg-content' viewBox='0 0 490.667 490.667' x='0px' y='0px' style='width: 1em; height: 1em;'> \n \
 											<path d='M466.201,237.781L231.534,3.115C229.55,1.131,226.841,0,224.003,0h-192c-4.309,0-8.213,2.603-9.856,6.592 s-0.725,8.555,2.304,11.627l227.136,227.115L24.451,472.448c-3.051,3.051-3.968,7.637-2.304,11.627 c1.664,3.989,5.547,6.592,9.856,6.592h192c2.837,0,5.547-1.131,7.552-3.115l234.667-234.667 C470.382,248.704,470.382,241.963,466.201,237.781z'> \n \
