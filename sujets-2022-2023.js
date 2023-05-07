@@ -32,12 +32,12 @@ var data = {
                 },
                 {
                         "name" : "Dancing lights",
-                        "description" : "",
+                        "description" : "Put a membrane with a mirror over a speaker. Then project the reflection of a laser pointer over a screen. By driving the speaker with single or multiple frequencies you may observe lines and shapes projected in the screen.",
                         "linkName" : "lights"
                 },
                 {
                         "name" : "Bubble love and tensions",
-                        "description" : "",
+                        "description" : "An investigation of the behavior of bubbles when two bubbles collide. Under what conditions will they rebound or coalesce ?",
                         "linkName" : "bubble"
                 },
                 {

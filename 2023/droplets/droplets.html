@@ -56,7 +56,7 @@
         <nav class="u-align-left u-menu u-menu-dropdown u-offcanvas u-menu-1" data-responsive-from="XL">
                 <div class="menu-collapse" style="font-size: 1rem;">
                 <a class="u-button-style u-nav-link" href="#" style="padding: 4px 0px; font-size: calc(1em + 8px);">
-                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302" style="">
+                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 302 302">
                 <use xlink:href="#svg-8a8f">
                 </use>
                 </svg>
@@ -103,7 +103,7 @@
         <div class="u-social-icons u-spacing-10 u-social-icons-1">
                 <a class="u-social-url" title="https://www.facebook.com/ENSTA.Paris/" target="_blank" href="https://www.facebook.com/ENSTA.Paris/">
                 <span class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1">
-                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
                 <use xlink:href="#svg-2cb8">
                 </use>
                 </svg>
@@ -117,7 +117,7 @@
                 </a>
                 <a class="u-social-url" title="twitter" target="_blank" href="https://twitter.com/ENSTAParis?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
                 <span class="u-icon u-icon-circle u-social-icon u-social-twitter u-icon-2">
-                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
                 <use xlink:href="#svg-a069">
                 </use>
                 </svg>
@@ -131,7 +131,7 @@
                 </a>
                 <a class="u-social-url" title="instagram" target="_blank" href="https://www.instagram.com/enstaparis/?hl=fr">
                 <span class="u-icon u-icon-circle u-social-icon u-social-instagram u-icon-3">
-                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112" style="">
+                <svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 112 112">
                 <use xlink:href="#svg-06ed">
                 </use>
                 </svg>
@@ -155,14 +155,208 @@
                 </header>
 
                 <div class="u-clearfix u-sheet u-sheet-1">
+                        <div class="u-align-center">
+				<img src="logo.png" class="centered" style="width: 30%;">
+			</div>
+                        <h6>IPT 2023 Problème #9: Spinning Droplets.</h6>
+                        <h6>Énoncé du sujet :</h6>
+                        On peut faire tourner de petites gouttelettes d'eau sur une surface hydrophobe en réalisant différents motifs hydrophiles. <br>
+                        Quelles propriétés du liquide (pas nécessairement de l'eau) peut-on extraire de ce type d'expérience ? <br>
+                        Optimisez le montage pour maximiser la vitesse de rotation des gouttelettes.
 
+                        <h3>Introduction :</h3>
+                        Avez-vous eu déjà eu l'occasion de voir de la pluie tomber sur des feuilles de lotus ? On observe que les gouttes qui tombent rebondissent après impact sur la feuille et gardent leur forme circulaire lorsqu'elles sont en contact avec celle-ci après avoir rebondi. Ces feuilles de lotus ont la particularité d'être des surfaces hydrophobes. Maintenant, si vous faites tomber une goutte d'eau sur une surface superhydrophobe (telle que les feuilles de lotus) et que vous tracez dessus des motifs hydrophiles asymétriques, il est possible de faire tourner la goutte en même temps qu'elle rebondit. C'est ce que l'on appelle, des « spinning droplets », ou en français, les « gouttes qui tournent ». Cette capacité des gouttes à tourner peut présenter son intérêt dans plusieurs domaines, tels que la propulsion dans le cadre d'optimisation de la réaction du mélange dans un moteur. 
+                        L'objectif de ce projet est le suivant : pouvoir maximiser la vitesse de rotation de la goutte après impact sur une surface superhydrophobe avec des motifs hydrophiles asymétriques et pouvoir déduire des propriétés du liquide à partir des expériences obtenues. Pour cela, nous devrons procéder par étape : 
+                        <ol>
+                                <li>Comprendre l'origine de la rotation de la goutte</li>
+                                <li>Créer notre surface superhydrophobe et tracer des motifs hydrophiles</li>
+                                <li>Réaliser le montage de la chute de la goutte sur la surface afin d'obtenir des vidéos exploitables</li>
+                                <li>Traiter les données et déterminer la vitesse de rotation de la goutte</li>
+                                <li>Maximiser la vitesse de rotation et déduire les paramètres qui peuvent être déduits à partir de ces expériences</li>
+                              </ol> 
+                        <h3>1. Théorie de la « spinning droplet »</h3>
+                        <h6>a) Théorie sur les surfaces superhydrophobes et hydrophiles</h6>
+                        Avant de comprendre la théorie derrière la rotation de la goutte, nous avons besoin de définir la notion d'hydrophobie et d'hydrophilie. Lorsqu'une goutte est posée sur une surface, elle peut avoir différentes formes. Elle peut soit avoir la forme d'une « flaque », soit la forme d'une « perle », c.-à-d. elle garde une forme quasiment circulaire. La forme de la goutte sur la surface est liée au caractère hydrophobe de la surface. 
+                        Physiquement, ce caractère hydrophobe peut être relié à une grandeur appelée la tension de surface. En effet, les liquides ont tendance à être sous une forme qui minimise leur énergie de surface, car il existe une interaction cohésive entre les molécules qui sont dans cette phase condensée, c'est pourquoi les gouttes ont une forme circulaire. Ainsi, la présence d'une interface, par exemple, l'interface liquide vapeur, entraîne une perte de la cohésion partielle des molécules à la surface, car les molécules de liquide n'interagissent pas avec les molécules de vapeur. On a ainsi une perte d'énergie appelée énergie de surface que l'on note Es. Cette énergie augmente avec la surface. On en découle ainsi la relation suivante : 
+                        <br>
+                        <div class="u-align-center">
+                                Es=&gamma;S
+			</div>
+                        Où
+                        <ul>
+                                <li>Es est l'énergie de surface</li>
+                                <li>&gamma; est la tension de surface</li>
+                                <li>S est la surface</li>
+                        </ul>
+                        Dans le cas de l'eau, la tension de surface vaut 72 N/m. <br>
+                        <br>
+                        Dans le cadre de la goutte d'eau, nous pouvons simplifier l'expression de Es, qui vérifie alors l'expression suivante : 
+                        <div class="u-align-center">
+                                Es=&gamma;R²
+                        </div>
+
+                        Le caractère hydrophobe d'une surface peut se déduire d'une équation, appelée l'équation d'Young et faisant appel aux tensions de surface entre les différentes phases du liquide : 
+                        <br>
+                        Ainsi, si l'angle statique est : 
+                        <ul>
+                                <li>&lt; 90° alors la surface est hydrophile</li>
+                                <li>&gt; 90° alors la surface est hydrophobe</li>
+                                <li>&gt; 150° alors la surface est superhydrophobe</li>
+                        </ul>
+                        <div class="u-align-center">
+				<img src="1.png" class="centered" style="width: 70%;">
+			</div>
+                        
+                        <h6>b) Théorie sur la rotation des gouttes</h6>
+                        Nous considérons maintenant que nous avons notre surface superhydrophobe, et nous décidons de tracer nos motifs hydrophiles dessus.<br>
+                        <div class="u-align-center">
+				<img src="2.png" class="centered" style="width: 50%;"> <br>
+                                Exemple de surface superhydrophobe (en noir) avec des motifs hydrophiles (en blanc)
+			</div>
+                        <br>
+                        La présence de la surface superhydrophobe va entraîner le rebond de la goutte après impact sur la surface, et la présence des motifs hydrophiles va engendrer sa rotation lors de ce rebond. En effet, lors de l'impact de la goutte sur la surface, cette dernière va être soumise à 3 forces, qui vont créer des moments et la faire tourner : 
+                        <ul>
+                                <li>La première est la force appliquée par la surface superhydrophobe sur la goutte. On se rend compte que cette force pousse la surface de contact de l'eau avec la surface de façon à générer un moment qui va la faire tourner de la droite vers la gauche : </li>
+                        </ul>
+                        <div class="u-align-center">
+				<img src="3.png" class="centered" style="width: 30%;">
+                                <img src="4.png" class="centered" style="width: 30%;">
+			</div>
+                        
+                        où
+                        <ul style="list-style-type: square;">
+                                <li>M<sub>L</sub> est le moment lié à la force appliquée par la surface superhydrophobe sur la goutte</li>
+                                <li>&theta;<sub>L</sub> est l'angle statique de la goutte sur la surface superhydrophobe</li>
+                                <li>L<sub>i</sub> est la longueur entre le centre du motif et la partie intérieure de la branche du motif en contact avec le fluide</li>
+                                <li>&phi; est l'angle entre la longueur L<sub>i</sub> et la longueur où la force est appliquée</li>
+                        </ul>
+                        
+                        <ul>
+                                <li>La deuxième est la force appliquée par les motifs hydrophiles sur la goutte. On se rend compte que cette force pousse la surface de contact de l'eau avec les motifs de façon à générer un moment qui va la faire tourner de la droite vers la gauche : </li>
+                        </ul>
+                        <div class="u-align-center">
+				<img src="5.png" class="centered" style="width: 30%;">
+                                <img src="6.png" class="centered" style="width: 30%;">
+			</div>
+                        
+                        où
+                        <ul style="list-style-type: square;">
+                                <li>M<sub>H</sub> est le moment lié à la force appliquée par la surface hydrophile sur la goutte</li>
+                                <li>&theta;<sub>H</sub> est l'angle statique de la goutte sur la surface hydrophile</li>
+                                <li>&beta;<sub>i</sub> est l'angle entre la longueur OC et la partie intérieure du motif en contact avec le fluide</li>
+                                <li>&beta;<sub>0</sub> est l'angle entre la longueur OC et la partie extérieure du motif en contact avec le fluide</li>
+                        </ul>
+
+                        <ul>
+                                <li>La dernière est la force de résistance de la goutte sur les motifs, mais qui est négligeable comparée aux deux autres forces : </li>
+                        </ul>
+                        <div class="u-align-center">
+				<img src="7.png" class="centered" style="width: 30%;">
+                                <img src="8.png" class="centered" style="width: 20%;">
+			</div>
+                        
+                        où
+                        <ul style="list-style-type: square;">
+                                <li>M<sub>R</sub> est le moment lié à la force de résistance de la goutte sur les motifs</li>
+                                <li>L<sub>i</sub> est la longueur entre le centre du motif et la partie intérieure de la branche du motif en contact avec le fluide</li>
+                                <li>&alpha; est l'angle entre la longueur L<sub>i</sub> et le point de contact où le motif est appliqué</li>
+                        </ul>
+
+
+                        La somme de ces deux forces va engendrer alors la rotation de la goutte dont le moment de rotation peut être entièrement caractérisée par la relation suivante : 
+                        <div class="u-align-center">
+				<img src="9.png" class="centered" style="width: 40%;">
+			</div>
+                        Avec : 
+                        <ul>
+                                <li>&Delta;&tau; la différence en temps entre le moment où l'eau est au dernier point de contact avec la partie intérieure du motif et le moment où l'eau est au dernier point de contact avec la partie extérieure du motif.</li>
+                                <li>N le nombres de branches du motif</li>
+                                <li>&gamma; la tension de surface</li>
+                                <li>D le diamètre maximal atteint par la goutte lorsqu'elle s'étale</li>
+                                <li>&theta;<sub>H</sub> l'angle de contact de la partie hydrophile</li>
+                                <li>&theta;<sub>L</sub> l'angle de contact de la partie hydrophile</li>
+                        </ul>	  
+                        Pour maximiser la vitesse de rotation, il nous faut faire varier les paramètres de cette équation.
+
+                        <h3>2. Fabrication de la surface superhydrophobe</h3>
+
+                        Maintenant que nous comprenons comment nos gouttes peuvent tourner, il nous reste à réaliser le montage expérimental pour répondre au sujet.<br>
+                        Le plus long a été de trouver comment fabriquer une surface la plus hydrophobe possible tout en étant robuste.
+                        Lors de nos premières tentatives, nous recouvrions des lames de microscopes avec de la simple suie de bougie. Cela permettait d'obtenir des surfaces avec un angle de contact intéressant, mais qui n'étaient pas robustes : dès qu'une goutte tombait avec un peu trop de vitesse elle emportait la suie avec elle et rendait impossible toute expérience. Après quelques autres tentatives non concluantes, nous avons fini par pulvériser une fine couche de laque sur la lame avant de la recouvrir de suie pour fixer celle-ci : nous obtenions alors des surfaces moins hydrophobes, mais assez robustes pour pouvoir tracer des motifs hydrophiles et pouvant être réutilisées plusieurs fois. 
+                        <div class="u-align-center">
+				<img src="10.png" class="centered" style="width: 80%;">
+                                <img src="11.png" class="centered" style="width: 100%;">
+			</div>
+
+                        L'étape suivante a été de créer nos motifs hydrophiles, tout simplement en enlevant la suie avec une pointe fine pour révéler la lame de verre, qui est hydrophile. Pour tracer des motifs réguliers rapidement, nous avons utilisé un « plotter ». Il s'agit d'une machine pouvant suivre un motif dessiné numériquement, avec une lame ou un stylo. 
+                        <div class="u-align-center">
+				<img src="12.png" class="centered" style="width: 50%;">
+                                <img src="13.png" class="centered" style="width: 30%;">
+			</div>
+
+                        Nous avons utilisé un stylo BIC vide, qui permettait d'obtenir des motifs de la bonne épaisseur. Nous obtenons finalement les lames suivantes : 
+                        <div class="u-align-center">
+				<img src="14.png" class="centered" style="width: 50%;">
+			</div>
+                        
+
+                        <h3>3. Préparation des films</h3>
+                        Nous avons ensuite réalisé un montage pour fixer une caméra ultra rapide (30 kHz) et la seringue pour lâcher les gouttes à la bonne hauteur.
+                        <div class="u-align-center">
+				<img src="15.png" class="centered" style="width: 40%;">
+                                <img src="16.png" class="centered" style="width: 40%;">
+			</div>
+
+                        <h3>4. Traitement des données</h3>
+                        Le montage expérimental est maintenant prêt : il ne nous reste plus qu'à faire varier nos paramètres et mesurer la vitesse de rotation de nos gouttes. Pour cela, nous utilisons une méthode de corrélation d'image souvent utilisée en mécanique des fluides : la PIV, que nous complétons avec un calcul effectué sous Matlab. Cela permet d'obtenir les composantes en x et y de la vitesse ainsi que la valeur de la vitesse de rotation.
+                        <div class="u-align-center">
+				<img src="17.png" class="centered" style="width: 49%;">
+                                <img src="18.png" class="centered" style="width: 49%;">
+			</div>
+
+                        Dans ce projet, nous avons fait varier les paramètres suivants : 
+                        <ul>
+                                <li>Le nombre de spirales N : 2, 3, 4 </li>
+                                <div class="u-align-center">
+                                        <img src="19.png" class="centered" style="width: 30%;">
+                                </div>
+                                <li>Le rayon des motifs R : il n'apparaît explicitement pas dans la formule du moment, mais il peut éventuellement influer sur la valeur de &Delta;&tau;.</li>
+                                <div class="u-align-center">
+                                        <img src="20.png" class="centered" style="width: 30%;">
+                                </div>
+                                <li>La tension de surface &gamma; : eau déminéralisée ou eau salée. L'eau salée est censée avoir une tension de surface supérieure à l'eau, mais nos mesures de tension de surface étaient peu précises et nous n'avons pas de valeurs fiables pour le confirmer.</li>
+                        </ul>
+
+                        <h3>5. Interprétation des résultats</h3>
+
+                        Nous avons réalisé plusieurs dizaines de films, et nous avons sélectionné les plus réussis pour obtenir le graphe suivant :
+                        <div class="u-align-center">
+				<img src="21.png" class="centered" style="width: 70%;">
+			</div>
+                        <ul>
+                                <li>Influence du nombre de branches N : </li>
+                                <div class="u-align-center">
+                                        <img src="22.png" class="centered" style="width: 70%;">
+                                </div>
+                                On remarque que la vitesse de rotation augmente quand N augmente : cela est cohérent avec la formule théorique du moment. Nous n'avons pas pu augmenter N davantage à cause du manque de précision du plotter.
+                                <li>Influence du rayon du motif :</li>
+                                <div class="u-align-center">
+                                        <img src="23.png" class="centered" style="width: 70%;">
+                                </div>
+                                La vitesse de rotation semble diminuer quand le rayon augmente. De même que pour le nombre de branches, le manque de précision du plotter nous a empêchés de diminuer le diamètre en dessous de 7 mm.
+                                <li>Influence de la tension de surface :</li>
+                                <div class="u-align-center">
+                                        <img src="24.png" class="centered" style="width: 70%;">
+                                </div>
+                                On ne peut pas distinguer les deux types d'expériences de manière significative, on ne peut donc pas conclure sur l'influence de la tension de surfaces.
+                        </ul>
                 </div>
 
                 <footer class="u-clearfix u-footer u-palette-3-base u-footer" id="sec-f2e8">
                                 <div class="u-clearfix u-sheet u-sheet-1">
                                         <div class="u-align-center u-container-style u-expanded-width-sm u-expanded-width-xs u-group u-group-1">
                                                 <div class="u-container-layout u-valign-middle-md">
-                                                        <p class="u-text u-text-1">Fondée en 1741 afin de former des ingénieurs-constructeurs de marine, l’ENSTA Paris a depuis étendu ses champs de compétence et occupe aujourd’hui une place de premier plan dans le paysage français de l’enseignement supérieur et de la recherche.</p>
+                                                        <p class="u-text u-text-1">Fondée en 1741 afin de former des ingénieurs-constructeurs de marine, l'ENSTA Paris a depuis étendu ses champs de compétence et occupe aujourd'hui une place de premier plan dans le paysage français de l'enseignement supérieur et de la recherche.</p>
                                                         <div class="u-align-left u-social-icons u-spacing-10 u-social-icons-1">
                                                                 <a class="u-social-url" target="_blank" href="https://www.facebook.com/ENSTA.Paris/" title="ensta">
                                                                         <span class="u-icon u-icon-circle u-social-facebook u-social-icon u-icon-1">
