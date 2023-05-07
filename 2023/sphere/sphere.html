@@ -45,10 +45,6 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         </head>
 
-
-
-
-
         <body class="u-body">
 
                 <header class="u-clearfix u-header u-header" id="sec-edd5">
@@ -155,6 +151,275 @@
                 </header>
 
                 <div class="u-clearfix u-sheet u-sheet-1">
+
+                        <div class="u-align-center">
+                                <img src="logo.png" class="centered" style="width: 20%;">
+                        </div>
+
+                        <h3>I - Introduction</h3>
+                        If you were to pick up a salt-filled saltshaker and turn it upside down, some salt might fall out from the shaker immediately after. However, they very quickly become clogged within the bottle. Hence, the need to shake it. In our problem, we have a similar phenomenon. We have some spheres (much bigger than a grain of salt) inside a bottle and we wish to find out the answers to the following questions:
+                        <ol>
+                                <li>How long does it take for the system to start clogging?</li>
+                                <li>What bottle shapes can prevent blockage?</li>
+                        </ol>
+                        To find out the answers to these questions, we shall study several parameters:
+                        <ul>
+                                <li>Diameter of opening</li>
+                                <li>Angle of opening</li>
+                        </ul>
+
+                        <h3>II - Experimental Setup</h3>
+
+                        To study the problem, we would have to vary the parameters listed above and conduct hundreds of experiments. To reduce the complexity of our experimental set-up, we decided to use a 2D funnel. 
+                        <br><br>
+                        To construct this set-up, we used a laser cutter to cut the funnel walls (made out of 5mm plexiglass) and sandwiched the walls between 2 plates of plexi-glass. With this set-up, we could very easily vary the different parameters:
+                        <ul>
+                                <li>Size of opening - by sliding the funnel walls horizontally to adjust them</li>
+                                <li>Angle of opening - by swapping out the bottom of the funnel walls</li>
+                        </ul>
+                        For each experiment, we performed the following steps:
+                        <ol>
+                                <li>Fill the reservoir with a fixed number of spheres (262 spheres in our case)</li>
+                                <li>Release the weight connected to the sliding bar (to ensure a consistent release of the spheres)</li>
+                                <li>Measure the time it takes for the hopper to become stuck</li>
+                        </ol>
+
+                        <div class="u-align-center">
+                                <img src="1.jpg" class="centered" style="width: 70%;"> <br>
+                                Figure 1 : Experimental Set-up
+                        </div>
+                        We performed a total of 410 experiments using 262 spheres with a diameter of 4mm for different opening sizes and for two different angles (34° et 60°). From our experiments, we were able to obtain the following results:
+
+                        <h3>III - Experimental Results</h3>
+
+                        <div class="u-align-center">
+                                <img src="2.png" class="centered" style="width: 80%;"> <br>
+                                Mean Blockage Time
+                        </div>
+                        In the above graph, we noticed that the mean blockage time appears to follow some sort of power curve. To determine the value of the exponent, we proceed to plot the log-blockage time against the log of the opening ratio.
+                        <div class="u-align-center">
+                                <img src="3.png" class="centered" style="width: 80%;">
+                        </div>
+                        We were then able to determine the values of the exponents for both 34 degrees and 60 degrees as 3.0 &PlusMinus; 0.5 and 2.7 &PlusMinus; 0.5 respectively. 
+                        <br><br>
+                        Generally, the mean blockage time of the system has a behaviour of t<sub>block</sub> &Proportional; D<sup>p</sup>.
+                        <div class="u-align-center">
+                                <img src="4.png" class="centered" style="width: 80%;"> <br>
+                                Blockage Probability
+                        </div>
+                        It is intuitive that blockage would happen very frequently when a hopper with a small opening is used. Likewise for the other extreme case – blockage would never happen when a hopper with a large opening is used. Between these two extremes, we observe a transition zone which resembles an inverted logistics curve.
+                        <br><br>
+                        From our results, this transition zone took place between D = 3.0 to D = 5.0 for 34 degrees and D = 2.3 to D = 4.2 for 60 degrees.
+
+                        <div class="u-align-center">
+                                <img src="5.png" class="centered" style="width: 40%;"> <br>
+                                Additional Statistics
+                        </div>
+                        For each experiment, we also counted the number of spheres that are involved in the blockage of the system. We then compiled the data and obtained the results below.
+                        <div class="u-align-center">
+                                <img src="6.png" class="centered" style="width: 60%;"> <br>
+                        </div>
+                        For instance, for a value of D = 1.1875, there is a 95% probability that an arch causing the blockage is formed by 2 spheres and there is a 5% probability that it is formed by 3 spheres. These results would come in useful in the theoretical approach section below.
+
+                        <h3>IV - Numerical Simulations</h3>
+                        Apart from the experiments that we conducted in real life, we also ran a series of numerical simulations on Python. We performed the following:
+                        <div class="u-align-center">
+                                <img src="7.png" class="centered" style="width: 70%;"> <br>
+                        </div>
+                        <ol>
+                                <li>Create a container with a hopper of a certain angle &theta;</li>
+                                <li>We randomly place 300 spheres above the hopper and let them fall</li>
+                                <li>The spheres would converge at the opening of the hopper and clog after a certain time (if the conditions are right)</li>
+                        </ol>
+                        We modeled frictional losses by assuming the velocity coefficient restitution coefficient as 0.75 for both the walls and spheres.
+                        <br><br>
+                        We performed these numerical simulations for 8 different angles and obtained a similar behaviour across all angles. 
+                        <div class="u-align-center">
+                                <img src="8.png" class="centered" style="width: 60%;"> <br>
+                                Graphs of Blockage Probability against opening ratio (D) for different angles
+                        </div>
+                        We also measured the blockage time of the system across different angles. While our results seem to be well-modeled by a power curve, we do not observe any clear trend other than the fact that they all fluctuate around a value of p = 4. 
+                        <div class="u-align-center">
+                                <img src="9.png" class="centered" style="width: 60%;"> <br>
+                                Graphs of the log of Mean Blockage Time against the log of opening ratio (D) for different angles
+                        </div>
+
+                        <h3>V - Theoretical Modeling</h3>
+
+                        We also looked at this problem from a theoretical perspective. We can start off by looking at an instance of a blockage.
+
+                        <div class="u-align-center">
+                                <img src="10.png" class="centered" style="width: 30%;"> <br>
+                        </div>
+
+                        From the above image, we can define a contiguous series of spheres as a n-chain where n is the number of spheres.
+
+                        <div class="u-align-center">
+                                <img src="11.png" class="centered" style="width: 30%;"> <br>
+                        </div>
+
+                        We can look at two examples in the image above.
+                        <br><br>
+                        However, a n-chain may not necessarily cause a blockage in the system. It is only under certain conditions that a n-chain can cause a blockage in the system. We shall define these chains as n-arches.
+                        <div class="u-align-center">
+                                <img src="12.png" class="centered" style="width: 30%;"> <br>
+                        </div>
+                        The conditions that we subject them would be:
+                        <div class="u-align-center">
+                                <img src="13.png" class="centered" style="width: 70%;"> <br>
+                        </div>
+
+                        <ol>
+                                <li>Spheres must be arranged from left to right</li>
+                                <div class="u-align-center">
+                                        <img src="14.png" class="centered" style="width: 70%;"> <br>
+                                </div>
+                                <li>Spheres must be convex</li>
+                                <div class="u-align-center">
+                                        <img src="15.png" class="centered" style="width: 70%;"> <br>
+                                </div>
+                                <li>Spheres must not clip into each other</li>
+                                <div class="u-align-center">
+                                        <img src="16.png" class="centered" style="width: 70%;"> <br>
+                                </div>
+                                <li>The span of the spheres must be wider than the opening of the hopper</li>
+                        </ol>
+
+                        From this model, we can calculate the blockage probability for a given system.
+                        <br><br>
+                        Step 1: We start off with a single sphere.
+                        <div class="u-align-center">
+                                <img src="17.png" class="centered" style="width: 40%;"> <br>
+                        </div>
+                        Step 2: The second sphere can be positioned anywhere within a π radians window. We assume that the probability of it being placed at any angle within this window is uniform.
+                        <div class="u-align-center">
+                                <img src="18.png" class="centered" style="width: 40%;"> <br>
+                        </div>
+                        For the third sphere, the window would be smaller.
+                        <div class="u-align-center">
+                                <img src="20.png" class="centered" style="width: 40%;">
+                        </div>
+
+                        Step 3: For the upper bound, it is bounded by &theta;<sub>1</sub> for an n-arch to be convex. For the lower bound, to avoid the third sphere from clipping into the first sphere, the minimum angle needs to be at least &pi;/3 radians greater than &theta;<sub>1</sub>. 
+                        <br><br>
+                        This would mean the window of placement would only be 2&pi;/3 radians. You may refer to the illustration above for a visual aid.
+                        <br><br>
+                        We can make a similar assumption that the third sphere has an equal probability of being positioned at any angle.
+                        <br><br>
+                        Step 4: We can repeat Step 3 for subsequent spheres. 
+                        <br><br>
+
+                        From the above model, we can calculate the probability distribution function for an arch of n disks to have a horizontal length of a<sub>n</sub>(x). 
+                        <div class="u-align-center">
+                                <img src="21.png" class="centered" style="width: 70%;"> <br>
+                        </div>
+                        Correspondingly, we can also calculate the cumulative probability for an arch of n disk to jam the hopper.
+
+                        <div class="u-align-center">
+                                <img src="22.png" class="centered" style="width: 70%;"> <br>
+                        </div>
+                        As we noticed in our experiments, for a fixed size of the hopper opening, blockages are composed of different numbers of spheres. We can use the statistics we collected in our numerical simulations and experiments to calculate the expected jamming probability for different sizes of the hopper opening. 
+
+                        <div class="u-align-center">
+                                <img src="23.png" class="centered" style="width: 70%;"> <br>
+                        </div>
+                        From this model, we should expect to get graphs seen below which agrees well with our experiments and our numerical simulations.
+
+                        <div class="u-align-center">
+                                <img src="24.png" class="centered" style="width: 70%;"> <br>
+                        </div>
+
+                        <h3>VI - 3D funnels</h3>
+                        From the 2D case, the probability of blockage is proportional to the number of possible configurations of the arches. From literature [4], we can infer that:
+                        <ul>
+                                <li>D<sub>critical,3D</sub> &lt; D<sub>critical,2D</sub></li>
+                                <li>p<sub>3D</sub> &lt; p<sub>2D</sub></li>
+                        </ul>
+                        <div class="u-align-center">
+                                <img src="25.png" class="centered" style="width: 50%;"> <br>
+                        </div>
+
+                        <h3>VII - Clearing the blockage</h3>
+                        From the numerous experiments that we performed, we noticed that we can sometimes unclog the system easily by introducing a small perturbation. We noticed this phenomenon in one of our experiments. 
+                        <ol>
+                                <li>A blockage at the hopper is formed.</li>
+                                <div class="u-align-center">
+                                        <img src="26.png" class="centered" style="width: 40%;"> <br>
+                                </div>
+                                <li>On the top left corner, a sphere falls and lands on the mass of spheres jammed above the hopper. </li>
+                                <div class="u-align-center">
+                                        <img src="27.png" class="centered" style="width: 40%;"> <br>
+                                </div>
+                                <li>The perturbation introduced by the falling sphere is sufficient to unclog the system.</li>
+                                <div class="u-align-center">
+                                        <img src="28.png" class="centered" style="width: 40%;"> <br>
+                                </div>
+                        </ol>
+
+                        From literature and from our experiments, we understand that there is a range of values of D where the hopper may be unclogged by introducing a small perturbation.
+                        <br><br>
+                        The following figure was taken from a paper studying a similar phenomenon.
+                        <div class="u-align-center">
+                                <img src="29.png" class="centered" style="width: 40%;"> <br>
+                        </div>
+                        This suggests that if we could introduce small perturbations to the system, we would be able to push the blockage probability curves downwards towards 0 in the relevant window.
+                        <div class="u-align-center">
+                                <img src="30.png" class="centered" style="width: 40%;"> <br>
+                        </div>
+                        To take advantage of this phenomenon, we can perhaps use a bottle shape like this. 
+                        <div class="u-align-center">
+                                <img src="31.png" class="centered" style="width: 40%;"> <br>
+                        </div>
+
+                        <ol>
+                                <li>By turning the bottle upside down, a huge bulk of the spheres would fall directly downwards towards the hopper. At the same time, a small number of spheres would take the longer route and travel within the handles.</li>
+                                <div class="u-align-center">
+                                        <img src="32.png" class="centered" style="width: 40%;"> <br>
+                                </div>
+                                <li>The main bulk of the spheres arrive at the hopper first and forms an arch - causing a blockage.</li>
+                                <div class="u-align-center">
+                                        <img src="33.png" class="centered" style="width: 40%;"> <br>
+                                </div>
+                                <li>The small number of spheres taking the longer route via the handles would then arrive and land on the jammed bulk of spheres. This perturbation would then break the arch and unclog the system.</li>
+                                <div class="u-align-center">
+                                        <img src="34.png" class="centered" style="width: 40%;"> <br>
+                                </div>
+                        </ol>
+
+                        After clearing the blockage the first time, we expect another arch to form and clog the system again. To overcome this, we can introduce an infinite cycle of:
+                        <ul>
+                                <li>Arch formation</li>
+                                <li>Perturbation of the system</li>
+                                <li>Breakage of the arch</li>
+                        </ul>
+                        <div class="u-align-center">
+                                <img src="35.png" class="centered" style="width: 40%;"> <br>
+                        </div>
+                        To apply this to the case of the baby bottle, an ideal bottle shape that prevents blockage would look like the following:
+                        <div class="u-align-center">
+                                <img src="36.png" class="centered" style="width: 40%;"> <br>
+                        </div>
+                        An arch forms and breaks until all the spheres in the bottle have been emptied.
+                        <br>
+                        Based on our initial results in the 2D case and taking advantage of the phenomenon described above, we expect the blockage probability for such a bottle to have:
+                        <ul>
+                                <li>The transition zone ending at a smaller value as in the case of a 3D bottle.</li>
+                                <li>A much steeper drop within the transition zone due to the constant breakage of the arches.</li>
+                        </ul>
+                        <div class="u-align-center">
+                                <img src="37.png" class="centered" style="width: 50%;"> <br>
+                        </div>
+
+                        <h3>VIII - Bibliography</h3>
+
+                        <ol>
+                                <li>Hafez, A., Liu, Q., Finkbeiner, T., Alouhali, R. A., Moellendick, T. E., & Santamarina, J. C. (2021). The effect of particle shape on discharge and clogging. Scientific Reports, 11(1). <a href="https://doi.org/10.1038/s41598-021-82744-w" target="_blank">Link</a></li>
+                                <li>Janda, A., Zuriguel, I., Garcimartín, A., Pugnaloni, L. A., & Maza, D. (2008). Jamming and critical outlet size in the discharge of a two-dimensional silo. EPL (Europhysics Letters), 84(4), 44002. <a href="https://doi.org/10.1209/0295-5075/84/44002" target="_blank">Link</a></li>
+                                <li>Park, S.-S., & Kim, E. S. (2020). Jamming probability of granular flow in 3D hopper with shallow columns: Dem simulations. Granular Matter, 22(4). <a href="https://doi.org/10.1007/s10035-020-01050-w" target="_blank">Link</a></li>
+                                <li>Thomas, C. C., & Durian, D. J. (2013). Geometry dependence of the clogging transition in tilted hoppers. Physical Review E, 87(5). <a href="https://doi.org/10.1103/physreve.87.052201" target="_blank">Link</a></li>
+                                <li>To, K., Lai, P.-Y., & Pak, H. K. (2001). Jamming of granular flow in a two-dimensional hopper. Physical Review Letters, 86(1), 71-74. <a href="https://doi.org/10.1103/physrevlett.86.71" target="_blank">Link</a></li>
+                                <li>Valdes, J. R., & Santamarina, J. C. (2008). Clogging: Bridge formation and vibration-based destabilization. Canadian Geotechnical Journal, 45(2), 177-184. <a href="https://doi.org/10.1139/t07-088" target="_blank">Link</a></li>
+                        </ol>
 
                 </div>
 

@@ -2,57 +2,57 @@ var data = {
         sujets : [
                 {
                         "name" : "Stuck metallic spheres",
-                        "description" : "",
+                        "description" : "Fill a bottle with small metal/plastic spheres with diameters of the same order of magnitude as the size of the opening.<br>Try to pour the spheres out of the bottle by turning it upside down. Similar to pouring salt from small openings, one can see that after a certain time the spheres become stuck and stop pouring out.<br>Investigate the phenomenon. What is the average time it takes before the system becomes stuck? What bottle shapes can prevent the system from getting stuck ?",
                         "linkName" : "sphere"
                 },
                 {
                         "name" : "Pringles stack ring",
-                        "description" : "Let's build a ring with Pringles",
+                        "description" : "It is possible to build structures by stacking Pringles on top of one another in various configurations. What are the physical parameters that allow some geometric patterns to be constructed? What is the largest stack ring that can be built? What maximal weight can it support ?",
                         "linkName" : "pringles"
                 },
                {
                         "name" : "Flapping flag",
-                        "description" : "Is it possible to build an anenometer only using the sound of a flapping flag ?",
+                        "description" : "Study a flag (or any piece of fabric and other sheet materials) hanging down while being subject to a uniform wind. Under what conditions does it start flapping? Build the most accurate anemometer based on the sound of the flapping flag.",
                         "linkName" : "flag"
                 },
                 {
                         "name" : "Mendocino meter",
-                        "description" : "The Mendocino motor is a solar-powered magnetically levitated electric motor. Can one make a precise illuminance meter based on this motor? ",
+                        "description" : "The Mendocino motor is a solar-powered magnetically levitated electric motor. Can one make a precise illuminance meter based on this motor ?",
                         "linkName" : "mendocino"
                 },
                 {
                         "name" : "Spinning droplets",
-                        "description" : "",
+                        "description" : "One can make small water droplets rotate over a hydrophobic surface by making various hydrophilic patterns over them. What properties of the liquid (not necessarily water) can we extract from this type of experiment? Optimize the setup to maximize the rotational speed of the droplets.",
                         "linkName" : "droplets"
                 },
                 {
                         "name" : "The chalk trick",
-                        "description" : "With a chalk, it is possible to draw continuous lines on a board. However, by varying the angle of contact, the line can turn into a dotted line! ",
+                        "description" : "It is possible to draw continuous lines in a blackboard with chalk. However, by changing the angle of contact, the line drawn on the board becomes a dotted line, though the movement is still continuous. What parameters from the relative movement between the chalk and the board can be inferred from the resulting trace? Is it possible to infer anything about the dimensions of the chalk ?",
                         "linkName" : "chalk"
                 },
                 {
                         "name" : "Dancing lights",
-                        "description" : "Put a membrane with a mirror over a speaker. Then project the reflection of a laser pointer over a screen. By driving the speaker with single or multiple frequencies you may observe lines and shapes projected in the screen.",
+                        "description" : "Put a membrane with a mirror over a speaker. Then project the reflection of a laser pointer over a screen. By driving the speaker with single or multiple frequencies you may observe lines and shapes projected in the screen. Given a closed trajectory in 2D of a single line, find the input on the speaker required to “paint” the line. Can you also “rotate” the line as you desire? Investigate the limitations.",
                         "linkName" : "lights"
                 },
                 {
                         "name" : "Bubble love and tensions",
-                        "description" : "An investigation of the behavior of bubbles when two bubbles collide. Under what conditions will they rebound or coalesce ?",
+                        "description" : "When two soap bubbles collide, they may rebound or coalesce. Find the conditions for both phenomena to occur.",
                         "linkName" : "bubble"
                 },
                 {
                         "name" : "Fire-shot-fire",
-                        "description" : "How to extinguish a flame from a maximum distance ?",
+                        "description" : "It is well known that a directed air blast can suppress a fire. Usually, such air blasts are directed by guiding the air through a pipe. Determine the parameters of the pipe to extinguish the fire from a maximum distance (measured from the end of the tube closest to the fire) using only your breath. Perform experiments on the fire from a candle.",
                         "linkName" : "fire"
                 },
                 {
                         "name" : "Unstable levitation",
-                        "description" : "",
+                        "description" : "It is possible to levitate a magnet stably without a superconductor or control system using a magnet rotating at high speeds.",
                         "linkName" : "levitation"
                 },
                 {
                         "name" : "Graphite plasma lamp",
-                        "description" : "Creation of a plasma ball in a microwave",
+                        "description" : "When a graphite rod is placed in a microwave oven, one can observe plasma formation at the tip of the rod. Investigate the duration of the phenomenon and the influencing parameters (microwave power, rod geometry and material, volume of the containment bowl, etc.). Investigate the duration of the plasma phase without burning the graphite rod: can we create an infinite lamp ?",
                         "linkName" : "plasma"
                 },
         ],
