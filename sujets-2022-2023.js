@@ -86,6 +86,15 @@ function addSujet(name, description, linkName,annee) {
 										<img> \n \
 									</span> \n \
 								</a> \n \
+                                                                <a href='./"+annee+"/"+linkName+"/"+linkName+"Video.html' data-page-id='330846' class='u-border-1 u-border-palette-2-base u-btn u-btn-round u-button-style u-gradient u-none u-radius-4 u-text-hover-black u-btn-11'>Videos&nbsp; \n \
+									<span class='u-icon u-icon-22'> \n \
+										<svg class='u-svg-content' viewBox='0 0 490.667 490.667' x='0px' y='0px' style='width: 1em; height: 1em;'> \n \
+											<path d='M466.201,237.781L231.534,3.115C229.55,1.131,226.841,0,224.003,0h-192c-4.309,0-8.213,2.603-9.856,6.592 s-0.725,8.555,2.304,11.627l227.136,227.115L24.451,472.448c-3.051,3.051-3.968,7.637-2.304,11.627 c1.664,3.989,5.547,6.592,9.856,6.592h192c2.837,0,5.547-1.131,7.552-3.115l234.667-234.667 C470.382,248.704,470.382,241.963,466.201,237.781z'> \n \
+											</path> \n \
+										</svg> \n \
+										<img> \n \
+									</span> \n \
+								</a> \n \
 							</div> \n \
 						</div> \n \
 					</div>"
